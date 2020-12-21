@@ -26,7 +26,7 @@ def send_mail (modeladmin,request,queryset):
          email.fail_silently = False
          email.send()
          inv_code = str(obj.invite_code)
-         user = User.objects.create_user(username=obj.name, password=inv_code)
+         user = User.objects.create_user(username=obj.name, password=inv_code, email=obj.email, first_name=obj.name)
          user.save()
          PendingInvite.objects.filter(invite_code=obj.invite_code).delete()
 
