@@ -1,0 +1,41 @@
+{% extends 'register/register_main.html' %}
+{% load static %}
+{% block content1 %}
+
+
+
+
+						<!-- begin content -->
+						<div class="page-full col-md-12 post-5076 page type-page status-publish hentry" id="content">
+							<div class="jl_cat_mid_title">
+								<h3 class="categories-title title" align="center">Register</h3>
+							</div>
+							<div class="content_single_page post-5076 page type-page status-publish hentry">
+								<div class="content_page_padding">
+									<div class="woocommerce">
+										<div class="woocommerce-notices-wrapper"></div>
+										<h6>Enter the Details</h6>
+										<form class="woocommerce-form woocommerce-form-login login" method="post">
+											{% csrf_token %}
+
+											{{form.as_p}}
+
+											<p class="form-row">
+											<button class="woocommerce-button button woocommerce-form-login__submit" name="register" value="register">Register</button>
+											</p>
+											<p class="woocommerce-LostPassword lost_password">	<a href="{% url 'more_info' %}">More Info</a>
+											</p>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+			<!-- end content -->
+
+
+
+
+
+
+{% endblock content1 %}
