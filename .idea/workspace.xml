@@ -21,13 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5facc6ff-f495-4757-9006-57fc3dcc08c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/migrations/0002_auto_20201221_1944.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myprofile/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myprofile/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myprofile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
