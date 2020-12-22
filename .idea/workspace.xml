@@ -20,17 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5facc6ff-f495-4757-9006-57fc3dcc08c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/family_tree/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/family_tree/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/family_tree/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/family_tree/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/home_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/home_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/migrations/0002_auto_20201221_1944.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +100,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1016" y="491" key="FileChooserDialogImpl" timestamp="1608302574911">

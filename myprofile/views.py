@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect
 from . import forms
 from django.contrib.auth.models import User, auth
+from django.contrib.auth import logout
 from login.models import ActiveInvite
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+@login_required
 def myprofile(request):
     form = forms.MyProfile()
     form2 =forms.UpdatePass()
@@ -62,7 +65,7 @@ def myprofile(request):
             activeinvite.address = address
             activeinvite.temp_address = temp_address
             activeinvite.parish = parish
-            #activeinvite.dob = dob
+            activeinvite.dob = dob
             activeinvite.blood = blood
             activeinvite.occupation = occupation
             activeinvite.company = company
@@ -70,7 +73,7 @@ def myprofile(request):
             activeinvite.spouse_name = spouse_name
             activeinvite.spouse_father = spouse_father
             activeinvite.spouse_mother = spouse_mother
-            #activeinvite.wedding_date = wedding_date
+            activeinvite.wedding_date = wedding_date
             #activeinvite.children_number = children_number
             #activeinvite.child1 = child1
             #activeinvite.child2 = child2
@@ -81,6 +84,12 @@ def myprofile(request):
 
 
     return render(request, 'myprofile/myprofile_page.html', {'form': form, 'form2': form2, 'profile': profile})
+
+
+@login_required
+def userlogout(request):
+    logout(request)
+    return redirect('login')
 
 
 
