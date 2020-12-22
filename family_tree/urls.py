@@ -26,6 +26,7 @@ urlpatterns = [
     path('login', include('login.urls')),                    # The page for user login
     path('home', include('home.urls')),                      # The page for each individual user
     path('myprofile', include('myprofile.urls')),            # The page for each individual user's profile information
+    path('familyevents', include('familyevents.urls')),
 ]
 
 

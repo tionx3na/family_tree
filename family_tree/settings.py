@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'home.apps.HomeConfig',
     'myprofile.apps.MyprofileConfig',
+    'familyevents.apps.FamilyeventsConfig',
 ]
 
 MIDDLEWARE = [
