@@ -1,11 +1,8 @@
 from django.db import models
-from six import python_2_unicode_compatible
 import uuid
 
 # Create your models here.
 
-
-@python_2_unicode_compatible
 class PendingInvite(models.Model):
     name = models.CharField(max_length=50, blank=False)
     email = models.CharField(max_length=100, blank=False)
