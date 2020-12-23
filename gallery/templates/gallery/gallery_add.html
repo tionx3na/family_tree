@@ -1,0 +1,67 @@
+{% extends 'gallery/gallery_main.html' %}
+{% load static %}
+{% block content1 %}
+
+
+
+
+
+<div class="mobile_menu_overlay"></div>
+			<div class="jl_auth_head_w">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 main_title_col">
+							<div class="auth">
+								<div class="author-info jl_auth_head">
+
+
+                        <h1>Add Album</h1>
+                                        <hr>
+
+
+
+
+						<div class="col-md-8 grid-sidebar" id="content">
+							<div class="jl_wrapper_cat">
+								<div id="content_masonry" class="jl_cgrid pagination_infinite_style_cat ">
+									<div class="content_single_page post-5076 page type-page status-publish hentry">
+									<div class="woocommerce">
+											<div class="woocommerce-notices-wrapper"></div>
+												<form class="woocommerce-form woocommerce-form-login login" method="post" enctype="multipart/form-data">
+                                        			{% csrf_token %}
+                                    				<p class="form-row">
+                                   					 {{form.as_p}}
+                                   					 </p>
+                                                    <br>
+                                                    <br>
+													<p class="form-row">
+													<button class="woocommerce-button button woocommerce-form-login__submit" name="Add" value="Add">Add</button>
+													</p>
+                                   				 </form>
+											</div>
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+{% endblock content1 %}

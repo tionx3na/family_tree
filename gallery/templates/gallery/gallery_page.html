@@ -1,0 +1,59 @@
+{% extends 'gallery/gallery_main.html' %}
+{% load static %}
+{% block content1 %}
+
+<div class="auth">
+<h1 align="center">GALLERY</h1>
+    <hr>
+    <h5 align="center"> <a href="{% url 'addalbum' %}">-Click To Add Album-</a> </h5>
+
+    <hr>
+    <br>
+</div>
+<!-- partial:index.partial.html -->
+<section id="portfolio">
+    {% for gallery in gallery %}
+    <div class="project">
+      <img class="project__image" src="{{gallery.thumbnail.url}}" />
+      <p>{{gallery.title}}</p>
+      <h3 class="grid__title"> {{gallery.user}}</h3>
+      <div class="grid__overlay">
+          <form action="{% url 'galleryfull' %}">
+        <button >view more</button>
+          </form>
+      </div>
+    </div>
+    {% endfor %}
+
+
+  </section>
+<!-- partial -->
+
+<div class="auth">
+    <br>
+    <br>
+<hr>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content1 %}

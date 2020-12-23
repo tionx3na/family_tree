@@ -212,10 +212,7 @@ pre{
 p img{
     margin-bottom: 0px !important;
 }
-img {
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
+
 }
 /** input */
 textarea {

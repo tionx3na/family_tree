@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'myprofile.apps.MyprofileConfig',
     'familyevents.apps.FamilyeventsConfig',
+    'gallery.apps.GalleryConfig',
 ]
 
 MIDDLEWARE = [
