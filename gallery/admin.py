@@ -3,5 +3,9 @@ from . models import *
 
 # Register your models here.
 
-admin.site.register(Add)
+
 admin.site.register(Pictures)
+
+
+admin.site.register(Add)
+

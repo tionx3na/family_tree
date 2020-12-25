@@ -3,7 +3,23 @@
 {% block content1 %}
 
 
-<h1>Successfull!!</h1>
+
+
+    <h1>Masonry Gallery</h1>
+
+    <div class="gallery" id="gallery">
+        {% for pics in pics %}
+        <div class="gallery-item">
+            <div class="content"><img src="{{pics.image.url}}" alt=""></div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+
+
+
 
 
 

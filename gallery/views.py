@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from . import forms
-from .models import Add
+from .models import Add, Pictures
 
 # Create your views here.
 
@@ -26,11 +26,18 @@ def addalbum(request):
         for t in thumbnail:
             add.thumbnail = t
         add.save()
+
+        for f in files:
+            pictures = Pictures()
+            pictures.add = Add.objects.get(title= title)
+            pictures.image = f
+            pictures.save()
         return redirect('gallery')
 
 
     return render(request, 'gallery/gallery_add.html', {'form': form})
 
 @login_required
-def galleryfull(request):
-    return render(request, 'gallery/gallery_full.html',)
+def galleryfull(request, title):
+    pics = Pictures.objects.filter(add__title=title)
+    return render(request, 'gallery/gallery_full.html', {'pics': pics})

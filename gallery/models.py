@@ -38,7 +38,7 @@ class Pictures(models.Model):
         verbose_name_plural = 'Gallery Pictures'
 
     def __str__(self):
-        return self.add
+        return self.add.title
 
     @property
     def imageURL(self):
