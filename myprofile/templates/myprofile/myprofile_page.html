@@ -217,48 +217,6 @@
 
 
 
-										{% if request.user.username == request.user.first_name %}
-
-
-										<div class="woocommerce">
-											<div class="woocommerce-notices-wrapper"></div>
-												<form class="woocommerce-form woocommerce-form-login login" method="post">
-                                        			{% csrf_token %}
-                                    				<p class="form-row">
-                                   					{{form2.as_p}}
-                                   					 </p>
-													<p class="form-row">
-													<button class="woocommerce-button button woocommerce-form-login__submit" name="Edit" value="Edit">Edit</button>
-													</p>
-                                   				 </form>
-											</div>
-										</div>
-
-
-										{% else %}
-
-
-
-										<div class="woocommerce">
-											<div class="woocommerce-notices-wrapper"></div>
-												<form class="woocommerce-form woocommerce-form-login login" method="post">
-                                        			{% csrf_token %}
-                                    				<p class="form-row">
-                                   					 {{form.as_p}}
-                                   					 </p>
-													<p class="form-row">
-													<button class="woocommerce-button button woocommerce-form-login__submit" name="Edit" value="Edit">Edit</button>
-													</p>
-                                   				 </form>
-											</div>
-										</div>
-
-
-										{% endif %}
-
-
-
-
 
 									</div>
 								</div>
@@ -376,6 +334,11 @@
 					</div>
 				</div>
 			</div>
+			<hr>
+   			<h5 align="center"> <a href="{% url 'profileedit' %}"> EDIT PROFILE</a> </h5>
+
+    		<hr>
+   			<br>
 			<!-- end content -->
 
 			<div id="go-top"> <a href="#go-top"><i class="jli-up-chevron"></i></a>

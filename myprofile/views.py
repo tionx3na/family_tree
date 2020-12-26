@@ -9,6 +9,17 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def myprofile(request):
+    profile = ActiveInvite.objects.filter(user=request.user)
+    return render(request, 'myprofile/myprofile_page.html', { 'profile': profile})
+
+
+@login_required
+def userlogout(request):
+    logout(request)
+    return redirect('login')
+
+
+def profileedit(request):
     form = forms.MyProfile()
     form2 =forms.UpdatePass()
     if request.method == 'POST':
@@ -82,14 +93,7 @@ def myprofile(request):
             activeinvite.save()
     profile = ActiveInvite.objects.filter(user=request.user)
 
-
-    return render(request, 'myprofile/myprofile_page.html', {'form': form, 'form2': form2, 'profile': profile})
-
-
-@login_required
-def userlogout(request):
-    logout(request)
-    return redirect('login')
+    return render(request,'myprofile/myprofile_edit.html', {'form': form, 'form2': form2, 'profile': profile})
 
 
 

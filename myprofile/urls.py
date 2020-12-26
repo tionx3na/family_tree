@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
     path('', views.myprofile, name="myprofile"),  # Pointer to register page function in views.py
     path('logout', views.userlogout, name="logout"),
+     path('profileedit', views.profileedit, name="profileedit"),
 ]
