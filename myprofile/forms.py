@@ -24,6 +24,8 @@ class MyProfile(forms.Form):
         ('O+', 'O+'),
         ('O-', 'O-'),
     )
+
+
     first_name = forms.CharField(max_length=20,  required = False, label='First Name')
     middle_name = forms.CharField(max_length=20, required=False, label='Middle Name')
     last_name = forms.CharField(max_length=20, required=False, label='Last Name')

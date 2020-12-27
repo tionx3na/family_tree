@@ -30,6 +30,7 @@ urlpatterns = [
     path('familyevents', include('familyevents.urls')),
     path('gallery', include('gallery.urls')),
     path('blog', include('blog.urls')),
+    path('tree', include('tree.urls')),
 ]
 
 

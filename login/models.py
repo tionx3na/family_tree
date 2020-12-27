@@ -30,12 +30,13 @@ class ActiveInvite(models.Model):
     spouse_father = models.CharField(max_length=50, null=True)
     spouse_mother = models.CharField(max_length=50, null=True)
     wedding_date = models.CharField(max_length=20, null=True)
+    date_edited = models.CharField(max_length=20, null=True)
     #children_number =  models.IntegerField(blank=True, default=0)
     #child1 = models.CharField(max_length=50,blank=True, default=0)
     #child2 = models.CharField(max_length=50,blank=True, default=0)
     #child3 = models.CharField(max_length=50,blank=True, default=0)
     #child4 = models.CharField(max_length=50,blank=True, default=0)
-    #photo =  models.ImageField(blank=True)
+    photo = models.ImageField(blank=True)
 
 
     class Meta:

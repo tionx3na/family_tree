@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'familyevents.apps.FamilyeventsConfig',
     'gallery.apps.GalleryConfig',
     'blog.apps.BlogConfig',
+    'tree.apps.FamilytreeConfig',
 ]
 
 SITE_ID = 1
