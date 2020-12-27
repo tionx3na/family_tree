@@ -32,6 +32,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jet',
+    'tinymce',
+    'django.contrib.sites',
+    'django.contrib.flatpages',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,7 +48,10 @@ INSTALLED_APPS = [
     'myprofile.apps.MyprofileConfig',
     'familyevents.apps.FamilyeventsConfig',
     'gallery.apps.GalleryConfig',
+    'blog.apps.BlogConfig',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,6 +61,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware'
+
 ]
 
 ROOT_URLCONF = 'family_tree.urls'
@@ -184,4 +192,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'erupakkattu.blog@gmail.com'
 EMAIL_HOST_PASSWORD = 'webdev@123456789'
+
+
 

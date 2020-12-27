@@ -24,8 +24,19 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
 	<link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" media="all" />
 	<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{% static 'css/gallery.css' %}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{% static 'css/gpics.css' %}" type="text/css" media="all" >
+	<script src="http://localhost/tiny_mce/tiny_mce_src.js"></script>
+	<script>
+tinyMCE.init({
+  mode: "textareas",  
+});
+</script>
+
 	<!-- end head -->
 </head>
+
+
 
 {% block content %}
 <body class="mobile_nav_class jl-has-sidebar">
@@ -89,58 +100,7 @@
 									</div>
 									<div class="search_header_wrapper search_form_menu_personal_click"><i class="jli-search"></i>
 									</div>
-									<div class="jl_h_cart nav-cart is-hover">
-										<a class="jl_l_cart cart-link" href="#" title="view cart"> <span class="jl_i_cart"><i class="jli-bag"></i><em class="cart-counter jl_count_cart">11</em></span>
-										</a>
-										<div class="jl-nav-cart jl-hshow">
-											<div class="jl-cart-wrap woocommerce">
-												<div class="widget_shopping_cart_content">
-													<ul class="woocommerce-mini-cart cart_list product_list_widget">
-														<li class="woocommerce-mini-cart-item mini_cart_item"> <a href="#" class="remove remove_from_cart_button">
-                                                   &times;
-                                                   </a>
-															<a href="#">
-																<img width="380" height="380" src="img/380x380.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />thread</a> <span class="quantity">
-                                                   9 &times;
-                                                   <span class="woocommerce-Price-amount amount">
-                                                   <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>12.00</bdi>
-															</span>
-															</span>
-														</li>
-														<li class="woocommerce-mini-cart-item mini_cart_item"> <a href="#" class="remove remove_from_cart_button" aria-label="Remove this item">
-                                                   &times;
-                                                   </a>
-															<a href="#">
-																<img width="380" height="380" src="img/380x380.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />cup</a> <span class="quantity">
-                                                   1 &times;
-                                                   <span class="woocommerce-Price-amount amount">
-                                                   <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>35.00</bdi>
-															</span>
-															</span>
-														</li>
-														<li class="woocommerce-mini-cart-item mini_cart_item"> <a href="#" class="remove remove_from_cart_button">
-                                                   &times;
-                                                   </a>
-															<a href="#">
-																<img width="380" height="380" src="img/380x380.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />Flowerpot Plant</a> <span class="quantity">
-                                                   1 &times;
-                                                   <span class="woocommerce-Price-amount amount">
-                                                   <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>2.00</bdi>
-															</span>
-															</span>
-														</li>
-													</ul>
-													<p class="woocommerce-mini-cart__total total"> <strong>Subtotal:</strong>
-														<span class="woocommerce-Price-amount amount">
-                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>145.00</bdi>
-														</span>
-													</p>
-													<p class="woocommerce-mini-cart__buttons buttons"><a href="#" class="button wc-forward">View cart</a><a href="#" class="button checkout wc-forward">Checkout</a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
+
 									<div class="jl_day_night jl_day_en"> <span class="jl-night-toggle-icon">
                                     <span class="jl_moon">
                                     <i class="jli-moon"></i>
@@ -165,7 +125,7 @@
 												</li>
 											</ul>
 										</li>
-										<li class="menu-item"> <a href="{% url 'blog' %}">Blog<span class="border-menu"></span></a>
+										<li class="menu-item"> <a href="inspiration.html">Blog<span class="border-menu"></span></a>
 										</li>
 										<li class="menu-item"> <a href="{% url 'gallery' %}">Gallery<span class="border-menu"></span></a>
 										</li>
@@ -312,7 +272,8 @@
 	<script src="{% static 'js/fluidvids.js' %}"></script>
 	<script src="{% static 'js/slick.js' %}"></script>
 	<script src="{% static 'js/custom.js' %}"></script>
+	<script src="{% static 'js/gallery.js' %}"></script>
+	<script src="{% static 'js/gpics.js' %}"></script>
 </body>
-
 
 </html>

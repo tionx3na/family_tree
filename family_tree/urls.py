@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path(r'^jet/', include('jet.urls', 'jet')),              # Django JET URLS
+    path('tinymce/', include('tinymce.urls')),
     path('admin/', admin.site.urls),                         # Admin Page
     path('', include('landing.urls')),                       # The page for the main landing page
     path('register', include('register.urls')),              # The page for user registration
@@ -28,6 +29,7 @@ urlpatterns = [
     path('myprofile', include('myprofile.urls')),            # The page for each individual user's profile information
     path('familyevents', include('familyevents.urls')),
     path('gallery', include('gallery.urls')),
+    path('blog', include('blog.urls')),
 ]
 
 
