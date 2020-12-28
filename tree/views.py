@@ -1,8 +1,18 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from .models import *
+
 
 # Create your views here.
 
 @login_required
 def tree(requests):
-    return render(requests, 'tree/tree_page.html')
+    tree = Tree.objects.all()
+    print(tree)
+    return render(requests, 'tree/tree_page.html', {'tree': tree})
+
+@login_required
+def temp(requests):
+    tree = Tree.objects.all()
+    print(tree)
+    return render(requests, 'tree/temp.html', {'tree': tree})
