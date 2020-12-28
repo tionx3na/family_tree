@@ -8,7 +8,7 @@ User = get_user_model()
 
 class Author(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    post_count = models.IntegerField()
+    post_count = models.IntegerField(default=0)
 
     def __str__(self):
         return self.user.username
@@ -25,7 +25,7 @@ class Post(models.Model):
     content = HTMLField('content', default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     comment_count = models.IntegerField(default=0)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    author = models.CharField(max_length=50, null=True)
     categories = models.ManyToManyField(Categories)
 
 
