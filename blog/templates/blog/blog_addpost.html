@@ -23,6 +23,7 @@
 	<script src="https://cdn.tiny.cloud/1/dzh1gtsk9q2m2wl6hh5rzxlh4m7kvl7s1aquq488ynsey29f/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   <script>tinymce.init({
       selector: 'textarea',
+      plugins: 'image',
 
    });</script>
 </head>
@@ -225,7 +226,7 @@
 									<div class="woocommerce">
 										<div class="woocommerce-notices-wrapper"></div>
 										<h6>Enter the Details</h6>
-										<form class="woocommerce-form woocommerce-form-login login" method="post">
+										<form enctype="multipart/form-data" class="woocommerce-form woocommerce-form-login login" method="post">
 											{% csrf_token %}
 
 											{{form.as_p}}

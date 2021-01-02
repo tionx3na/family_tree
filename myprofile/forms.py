@@ -30,6 +30,7 @@ class MyProfile(forms.Form):
     middle_name = forms.CharField(max_length=20, required=False, label='Middle Name')
     last_name = forms.CharField(max_length=20, required=False, label='Last Name')
     nick_name = forms.CharField(max_length=20, required=False, label= 'Nick Name')
+    thumbnail = forms.FileField(label='Upload a profile Picture')
     mobile1 = forms.CharField(min_length=7, required=False, label='Mobile Number 1', validators=[RegexValidator('^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed")])
     mobile2 = forms.CharField(min_length=7, required=False, label='Mobile Number 2',  validators=[RegexValidator('^\+?1?\d{9,15}$',message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed")])
     Whatsapp = forms.CharField(min_length=7, required=False, label='Whatsapp Number',  validators=[RegexValidator('^\+?1?\d{9,15}$',message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed")])

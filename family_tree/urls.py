@@ -31,6 +31,7 @@ urlpatterns = [
     path('gallery', include('gallery.urls')),
     path('blog', include('blog.urls')),
     path('tree', include('tree.urls')),
+    path('search', include('search.urls')),
 ]
 
 

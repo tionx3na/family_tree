@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'gallery.apps.GalleryConfig',
     'blog.apps.BlogConfig',
     'tree.apps.FamilytreeConfig',
+    'search.apps.SearchConfig',
 ]
 
 SITE_ID = 1

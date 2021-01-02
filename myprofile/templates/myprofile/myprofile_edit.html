@@ -23,6 +23,7 @@
 												<form class="woocommerce-form woocommerce-form-login login" method="post">
                                         			{% csrf_token %}
                                     				<p class="form-row">
+
                                    					{{form2.as_p}}
                                    					 </p>
 													<p class="form-row">
@@ -39,7 +40,7 @@
 
 										<div class="woocommerce">
 											<div class="woocommerce-notices-wrapper"></div>
-												<form class="woocommerce-form woocommerce-form-login login" method="post">
+												<form enctype="multipart/form-data" class="woocommerce-form woocommerce-form-login login" method="post">
                                         			{% csrf_token %}
                                     				<p class="form-row">
                                    					 {{form.as_p}}

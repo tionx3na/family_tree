@@ -5,4 +5,4 @@ from .models import *
 
 admin.site.register(Author)
 admin.site.register(Post)
-admin.site.register(Categories)
+admin.site.register(Comments)

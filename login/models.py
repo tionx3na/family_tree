@@ -36,7 +36,7 @@ class ActiveInvite(models.Model):
     #child2 = models.CharField(max_length=50,blank=True, default=0)
     #child3 = models.CharField(max_length=50,blank=True, default=0)
     #child4 = models.CharField(max_length=50,blank=True, default=0)
-    photo = models.ImageField(blank=True)
+    photo = models.ImageField(blank=True, default='profile_pics/default.jpg')
 
 
     class Meta:
@@ -46,7 +46,7 @@ class ActiveInvite(models.Model):
         verbose_name_plural = 'User Informations'
 
     def __str__(self):
-        return self.first_name
+        return self.user.username
 
     @property
     def imageURL(self):

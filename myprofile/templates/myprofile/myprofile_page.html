@@ -13,12 +13,37 @@
     <hr>
     <br>
 </div>
+										{% if request.user.username == request.user.first_name %}
+
+
+										<div class="woocommerce">
+											<div class="woocommerce-notices-wrapper"></div>
+												<form class="woocommerce-form woocommerce-form-login login" method="post">
+                                        			{% csrf_token %}
+                                    				<p class="form-row">
+														<h1>Enter a new username and passwrod!</h1>
+                                   					{{form2.as_p}}
+                                   					 </p>
+													<p class="form-row">
+													<button class="woocommerce-button button woocommerce-form-login__submit" name="Edit" value="Edit">Edit</button>
+													</p>
+                                   				 </form>
+											</div>
+										</div>
+
+
+										{% else %}
+
 
 <!-- partial:index.partial.html -->
 <div class="card" data-state="#about">
   <div class="card-header">
-    <div class="card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
-    <img class="card-avatar" src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="avatar" />
+	  {% for profile in profile %}
+    <div class="card-cover" style="background-image: url('{{profile.photo.url | default_if_none:'#'}}')"></div>
+    <img class="card-avatar" src="{{profile.photo.url | default_if_none:'#'}}" alt="avatar" />
+	  {% endfor %}
+
+
 	  {% for profile in profile %}
     <h1 class="card-fullname">{{profile.first_name}} {{profile.middle_name}} {{profile.last_name}}</h1>
     <h2 class="card-jobtitle">@{{user}}</h2>
@@ -114,6 +139,7 @@
 </div>
 
 <!-- partial -->
+
 
 
 <div class="options_layout_wrapper jl_clear_at jl_radius jl_none_box_styles jl_border_radiuss jl_en_day_night">
@@ -217,6 +243,7 @@
 						</div>
 					</div>
 				</section>
+				{% endif %}
                 <br>
                 <br>
 			<div id="go-top"> <a href="#go-top"><i class="jli-up-chevron"></i></a>

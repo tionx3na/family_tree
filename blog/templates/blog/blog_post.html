@@ -3,4 +3,287 @@
 {% block content1 %}
 
 
+
+
+
+
+
+
+
+			<div class="mobile_menu_overlay"></div>
+			<section id="content_main" class="clearfix jl_spost">
+				<div class="container">
+					<div class="row main_content">
+						<div class="col-md-8  loop-large-post" id="content">
+							<div class="widget_container content_page">
+								<!-- start post -->
+								{% for post in post %}
+								<div class="post-2838 post type-post status-publish format-standard has-post-thumbnail hentry category-sports tag-gaming" id="post-2838">
+									<div class="single_section_content box blog_large_post_style">
+										<div class="jl_single_style2">
+											<div class="single_post_entry_content single_bellow_left_align jl_top_single_title jl_top_title_feature"> <span class="meta-category-small single_meta_category"><a class="post-category-color-text" style="background:#62ce5c" href="#">{{post.tag}}</a></span>
+												<h1 class="single_post_title_main">{{post.title}}</h1>
+											</div>
+											<div class="single_post_entry_content single_bellow_left_align jl_top_single_title jl_top_title_feature">
+												<h1 class="single_post_title_main">{{post.overview|safe}}</h1>
+												<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">{{post.author}}</a></span><span class="post-date"><i class="jli-pen"></i>{{post.timestamp}}</span><span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span><span class="meta-comment"><i class="jli-comments"></i><a href="#">{{post.comment_count}} comments</a></span></span>
+											</div>
+										</div>
+										<div class="post_content_w">
+											<div class="post_sw">
+												<div class="post_s">
+													<div class="jl_single_share_wrapper jl_clear_at">
+														p <br>
+														l <br>
+														a <br>
+														c <br>
+														e <br>
+														h <br>
+														o <br>
+														l <br>
+														d <br>
+														e <br>
+														r <br>
+													</div>
+												</div>
+											</div>
+											<div class="post_content jl_content">
+
+
+
+
+											{{post.content|safe}}
+
+
+
+
+
+
+
+											</div>
+										</div>
+										<div class="clearfix"></div>
+										<div class="single_tag_share ">
+											<div class="tag-cat">
+												<ul class="single_post_tag_layout">
+													<li><a href="#" rel="tag">{{post.tag}}</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										{% endfor %}
+
+
+
+
+
+
+
+
+										<div class="postnav_w">
+											<div class="postnav_left">
+												<div class="single_post_arrow_content">
+													<a href="#" id="prepost"> <span class="jl_cpost_nav">
+                                        <span class="jl_post_nav_link"><i class="jli-left-arrow"></i>Previous post</span>
+														<span class="jl_cpost_title">This guitar sound is so good and i need it more</span>
+														</span>
+													</a>
+												</div>
+											</div>
+											<div class="postnav_right">
+												<div class="single_post_arrow_content">
+													<a href="#" id="nextpost"> <span class="jl_cpost_nav">
+                                        <span class="jl_post_nav_link">Next post<i class="jli-right-arrow"></i></span>
+														<span class="jl_cpost_title">This place really good place for reading</span>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<br>
+										<hr>
+										<h1>Comments</h1>
+										{% for comments in comments %}
+										<div class="auth">
+											<div class="author-info jl_info_auth">
+												<div class="author-avatar">
+													{% for ai in ai %}
+													<img src="{{comments.user}}" width="165" height="165" alt="Spraya" class="avatar avatar-165 wp-user-avatar wp-user-avatar-165 alignnone photo">
+													{% endfor %}
+												</div>
+												<div class="author-description">
+													<h5><a href="#"></a>{{comments.user}}</h5>
+													<ul class="jl_auth_link clearfix">
+														<li><a href="#" target="_blank"><i class="jli-link"></i></a>
+														</li>
+														<li><a href="#" target="_blank"><i class="jli-linkedin"></i></a>
+														</li>
+														<li><a href="#" target="_blank"><i class="jli-rss"></i></a>
+														</li>
+													</ul>
+													<p>{{comments.comment}}</p>
+												</div>
+											</div>
+										</div>
+										{% endfor %}
+
+
+
+
+
+
+
+
+
+										<div id="respond" class="comment-respond">
+											<h3 id="reply-title" class="comment-reply-title">Leave a Reply</h3>
+											<form method="post" id="commentform" class="comment-form">
+												{% csrf_token %}
+												<p class="comment-notes"><span id="email-notes">Leave a reply for the author's post.</span>The comments will be monitored by the admin!<span class="required">*</span>
+												</p>
+												<p class="comment-form-comment">
+													<textarea class="u-full-width" id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Comment"></textarea>
+												</p>
+
+												<p class="form-submit">
+													<input name="submit" type="submit" id="submit" class="submit" value="Post Comment">
+													<input type="hidden" name="comment_post_ID" id="comment_post_ID">
+												</p>
+											</form>
+										</div>
+										<!-- #respond -->
+									</div>
+								</div>
+								<!-- end post -->
+								<div class="brack_space"></div>
+							</div>
+						</div>
+						<div class="col-md-4" id="sidebar">
+							<div class="jl_sidebar_w">
+								<div id="sprasa_widget_social_counter_c-2" class="widget jl-widget-social-counter">
+									<div class="widget-title">
+										<h2 class="jl_title_c">Stay Connected</h2>
+									</div>
+									<div class="jl_social_counter social_counter_wraper jl_count_style_2 social_counter_item>">
+										<div class="jlsocial-element jl-facebook jl_radus_e">
+											<a target="_blank" href="https://facebook.com/envato" class="facebook" title="facebook"></a> <span class="jlsocial-element-left">
+                            <i class="jli-facebook" aria-hidden="true"></i>
+                            <span class="num-count">228.8k</span>
+											</span> <span class="jlsocial-element-right">fans</span>
+										</div>
+										<div class="jlsocial-element jl-youtube jl_radus_e">
+											<a target="_blank" href="https://www.youtube.com/user/envato " title="Youtube"></a> <span class="jlsocial-element-left">
+                            <i class="jli-youtube" aria-hidden="true"></i>
+                            <span class="num-count">65.5k</span>
+											</span> <span class="jlsocial-element-right">subscribers</span>
+										</div>
+										<div class="jlsocial-element jl-vimeo jl_radus_e">
+											<a target="_blank" href="https://vimeo.com/beeple" title="vimeo"></a> <span class="jlsocial-element-left">
+                            <i class="jli-vimeo" aria-hidden="true"></i>
+                            <span class="num-count">240</span>
+											</span> <span class="jlsocial-element-right">subscribers</span>
+										</div>
+										<div class="jlsocial-element jl-pinterest jl_radus_e">
+											<a target="_blank" href="https://pinterest.com/envato" class="pinterest" title="pinterest"></a> <span class="jlsocial-element-left">
+                        <i class="jli-pinterest" aria-hidden="true"></i>
+                        <span class="num-count">9.87k</span>
+											</span> <span class="jlsocial-element-right">followers</span>
+										</div>
+									</div>
+								</div>
+								<div id="sprasa_recent_post_text_widget-9" class="widget post_list_widget">
+									<div class="widget_jl_wrapper">
+										<div class="ettitle">
+											<div class="widget-title">
+												<h2 class="jl_title_c">Art &amp; Fashion</h2>
+											</div>
+										</div>
+										<div class="bt_post_widget">
+											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
+												<div class="jl_m_right_w">
+													<div class="jl_m_right_img jl_radus_e">
+														<a href="#">
+															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
+														</a>
+													</div>
+													<div class="jl_m_right_content">
+														<h2 class="entry-title"> <a href="#" tabindex="-1">This place really good place for reading</a></h2>
+														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
+													</div>
+												</div>
+											</div>
+											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
+												<div class="jl_m_right_w">
+													<div class="jl_m_right_img jl_radus_e">
+														<a href="#">
+															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
+														</a>
+													</div>
+													<div class="jl_m_right_content">
+														<h2 class="entry-title"> <a href="#" tabindex="-1">Having fun with DJ and the best music drop</a></h2>
+														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
+													</div>
+												</div>
+											</div>
+											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
+												<div class="jl_m_right_w">
+													<div class="jl_m_right_img jl_radus_e">
+														<a href="#">
+															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
+														</a>
+													</div>
+													<div class="jl_m_right_content">
+														<h2 class="entry-title"> <a href="#" tabindex="-1">This guitar sound is so good and i need it more</a></h2>
+														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
+													</div>
+												</div>
+											</div>
+											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
+												<div class="jl_m_right_w">
+													<div class="jl_m_right_img jl_radus_e">
+														<a href="#">
+															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
+														</a>
+													</div>
+													<div class="jl_m_right_content">
+														<h2 class="entry-title"> <a href="#" tabindex="-1">Technology can make your live easy and fast</a></h2>
+														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="sprasa_ads300x250_widget-2" class="widget jellywp_ads300x250_widget">
+									<div class="widget_jl_wrapper ads_widget_container">
+										<div class="widget-title">
+											<h2 class="jl_title_c">Advertisement</h2>
+										</div>
+										<div class="ads300x250-thumb jl_radus_e">
+											<a href="#">
+												<img src="img/380x380.png" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end content -->
+			
+
+			<div id="go-top"> <a href="#go-top"><i class="jli-up-chevron"></i></a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
 {% endblock content1 %}
