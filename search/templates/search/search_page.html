@@ -453,7 +453,7 @@
 
 
 							</header>
-							{% if param != None %}
+							{% if arg != ' ' %}
 							<div class="page-content jl-content-section none-sidebar">
 								<div class="jl-container">
 									<div class="jl-content">
@@ -496,14 +496,15 @@
 
 
 
+												{% if first_name %}
 
-
+												{% for name in first_name %}
 												<div class="products wc-col-4">
 													<div class="jl-wc-col product type-product post-47 status-publish first instock product_cat-clothing product_cat-hoodies has-post-thumbnail shipping-taxable purchasable product-type-simple">
 														<div class="p-feat">
 															<div class="product-thumb">
 																<a href="shop-single.html" class="woocommerce-loop-product-link">
-																	<img width="380" height="380" src="img/380x380.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy">
+																	<img width="380" height="380" src="{{name.photo.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy">
 																</a>
 																<div class="product-buttons  cart-tooltips"><a href="?add-to-cart=47" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="47" data-product_sku="" aria-label="Add “alarm clock” to your cart" rel="nofollow">Add to cart</a>
 																</div>
@@ -511,14 +512,17 @@
 														</div>
 														<div class="product-loop-content clearfix">
 															<h2 class="woocommerce-loop-product__title h4">
-            <a href="#" class="woocommerce-loop-product-link p-url">alarm clock</a>
+            <a href="#" class="woocommerce-loop-product-link p-url">{{name.first_name}} {{name.middle_name}} {{name.last_name}}</a>
         </h2>
-															<div class="star-rating" role="img" aria-label="Rated 4.50 out of 5"><span style="width:90%">Rated <strong class="rating">4.50</strong> out of 5</span>
-															</div> <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>35.00</bdi>
+															<div ><span style="width:90%">Username: <strong class="rating">{{name.user.username}}</strong></span>
+															</div> <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>Phone: {{name.mobile1}}</bdi>
 															</span>
 															</span>
 														</div>
 													</div>
+													{% endfor %}
+
+													{% endif %}
 
 
 
