@@ -10,6 +10,7 @@ class FamilyEvent(models.Model):
     month = models.CharField(max_length=10, null=True)
     year = models.CharField(max_length=10, null=True)
     content = models.CharField(max_length=100000, null=True)
+    pic = models.ImageField(blank=True, default='profile_pics/default.jpg')
 
 
     class Meta:
@@ -19,4 +20,12 @@ class FamilyEvent(models.Model):
         verbose_name_plural = 'Events'
 
     def __str__(self):
-        return self.first_name
+        return self.title
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.pic.url
+        except:
+            url = ''
+        return url

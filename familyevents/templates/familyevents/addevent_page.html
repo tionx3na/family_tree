@@ -6,14 +6,14 @@
 <!-- begin content -->
 						<div class="page-full col-md-12 post-5076 page type-page status-publish hentry" id="content">
 							<div class="jl_cat_mid_title">
-								<h3 class="categories-title title" align="center">Login</h3>
+								<h3 class="categories-title title" align="center">Add an Event</h3>
 							</div>
 							<div class="content_single_page post-5076 page type-page status-publish hentry">
 								<div class="content_page_padding">
 									<div class="woocommerce">
 										<div class="woocommerce-notices-wrapper"></div>
 										<h6>Enter the Details</h6>
-										<form class="woocommerce-form woocommerce-form-login login" method="post">
+										<form enctype="multipart/form-data" class="woocommerce-form woocommerce-form-login login" method="post">
 											{% csrf_token %}
 
 											{{form.as_p}}

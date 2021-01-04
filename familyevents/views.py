@@ -14,6 +14,7 @@ def events(request):
 def addevent(request):
     form = forms.Event()
     if request.method == 'POST':
+        pro_pic = request.FILES.getlist('thumbnail')
         title = request.POST.get('title')
         date = request.POST.get('date')
         content = request.POST.get('content')
@@ -67,9 +68,10 @@ def addevent(request):
         familyevent.month = month_name
         familyevent.year = year
         familyevent.content = content
-        familyevent.save()
-
-
+        for pic in pro_pic:
+            print(pro_pic)
+            familyevent.pic = pic
+            familyevent.save()
 
         return redirect('events')
 

@@ -65,38 +65,13 @@ window.onload = function () {
             args.html += '<use xlink:href="#baby" x="'+ args.p.xa +'" y="'+ args.p.ya +'"/>';
         }
     });
-    
-    
-  
 
-      
+    {% for tree in tree %}
+    chart.add({ id: {{tree.id}},  name: "{{tree.name}}", title: "Sales Manager" });
+    chart.draw(OrgChart.action.init);
 
+    {% endfor %}
 };
     </script>
-
-    <script type="text/javascript">
-        
-        {% for tree in tree %}
-            var jsvar = "{{tree}}";
-            {% if tree.pid %}
-            
-                chart.add([
-                { id: jsvar.id , pid: jsvar.connected_to_id   , tags: jsvar.tag , name: jsvar.name , title: jsvar.description , img:"https://cdn.balkan.app/shared/f19.png"}
-                ])
-            {% elif tree.ppid %}
-                chart.add([
-                { id: jsvar.id ,  ppid: jsvar.child_of_id , tags: jsvar.tag , name: jsvar.name , title: jsvar.description , img:"https://cdn.balkan.app/shared/f19.png"}
-                ])   
-            {% else %}
-                chart.add([
-                { id: jsvar.id , tags: jsvar.tag , name: jsvar.name , title: jsvar.description , img:"https://cdn.balkan.app/shared/f19.png"}
-                ])
-            {% endif %}
-            chart.draw(OrgChart.action.init);
-        {% endfor %}
-    </script>
-    
-
-    
 </body>
 </html>
