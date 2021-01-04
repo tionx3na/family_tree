@@ -4,61 +4,38 @@
 
 
 
-	<div id="content_nav" class="jl_mobile_nav_wrapper">
+	<div class="mobile_menu_overlay"></div>
+				<div id="content_nav" class="jl_mobile_nav_wrapper">
 				<div id="nav" class="jl_mobile_nav_inner">
 					<div class="menu_mobile_icons mobile_close_icons closed_menu"> <span class="jl_close_wapper"><span class="jl_close_1"></span><span class="jl_close_2"></span></span>
 					</div>
 					<ul id="mobile_menu_slide" class="menu_moble_slide">
-						<li class="menu-item current-menu-item current_page_item"> <a href="index.html">Home<span class="border-menu"></span></a>
+						<li class="menu-item current-menu-item current_page_item"> <a href="{% url 'home' %}">Home<span class="border-menu"></span></a>
 						</li>
-						<li class="menu-item menu-item-has-children"> <a href="">Features<span class="border-menu"></span></a>
+						<li class="menu-item menu-item-has-children"> <a href="#">Features<span class="border-menu"></span></a>
 							<ul class="sub-menu">
-								<li class="menu-item menu-item-has-children"> <a href="post-layout-1.html">Post Layout<span class="border-menu"></span></a>
-									<ul class="sub-menu">
-										<li class="menu-item"> <a href="post-layout-1.html">Post Layout 1<span class="border-menu"></span></a>
-										</li>
-										<li class="menu-item"> <a href="post-layout-2.html">Post Layout 2<span class="border-menu"></span></a>
-										</li>
-										<li class="menu-item"> <a href="post-layout-3.html">Post Layout 3<span class="border-menu"></span></a>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item menu-item-has-children"> <a href="post-format-standard.html">Post Format<span class="border-menu"></span></a>
-									<ul class="sub-menu">
-										<li class="menu-item"> <a href="post-format-standard.html">Post format standard<span class="border-menu"></span></a>
-										</li>
-										<li class="menu-item"> <a href="post-format-gallery.html">Post format gallery<span class="border-menu"></span></a>
-										</li>
-										<li class="menu-item"> <a href="post-format-quote.html">Post Format Quote<span class="border-menu"></span></a>
-										</li>
-										<li class="menu-item"> <a href="post-format-video.html">Post format video<span class="border-menu"></span></a>
-										</li>
-										<li class="menu-item"> <a href="post-format-audio.html">Post format audio<span class="border-menu"></span></a>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item"> <a href="author.html">Author Page<span class="border-menu"></span></a>
-								</li>
-								<li class="menu-item"> <a href="category.html">Category Page<span class="border-menu"></span></a>
-								</li>
-								<li class="menu-item"> <a href="page-404.html">Page 404<span class="border-menu"></span></a>
-								</li>
-							</ul>
+												<li class="menu-item"> <a href="{% url 'tree' %}">Family Tree</a></li>
+												<li class="menu-item"> <a href="post-format-standard.html">Family Heritage</span></a></li>
+												<li class="menu-item"> <a href="{% url 'search' ' ' %}">Search Members<span class="border-menu"></span></a>
+												</li>
+											</ul>
 						</li>
-						<li class="menu-item"> <a href="inspiration.html">Inspiration<span class="border-menu"></span></a>
+						<li class="menu-item"> <a href="{% url 'blog' %}">Blog<span class="border-menu"></span></a>
+										</li>
+										<li class="menu-item"> <a href="{% url 'gallery' %}">Gallery<span class="border-menu"></span></a>
+										</li>
+										<li class="menupost"> <a href="{% url 'events' %}">Family Events<span class="border-menu"></span>
 						</li>
-						<li class="menu-item"> <a href="category.html">Active<span class="border-menu"></span></a>
-						</li>
-						<li class="menu-item"> <a href="business.html">Business<span class="border-menu"></span></a>
-						</li>
-						<li class="menu-item menu-item-has-children"> <a href="shop.html">Shop<span class="border-menu"></span></a>
-							<ul class="sub-menu">
-								<li class="menu-item"> <a href="cart.html">Cart<span class="border-menu"></span></a>
-								</li>
-								<li class="menu-item"> <a href="my-account.html">My Account<span class="border-menu"></span></a>
-								</li>
-							</ul>
-						</li>
+						<li class="menu-item menu-item-has-children"> <a href="{% url 'myprofile' %}">My Profile<span class="border-menu"></span>
+                                       <span class="jl_menu_lb" style="background: #ffe500 !important; color: #000000 !important;"><span class="jl_lb_ar" style="border-top: 3px solid #ffe500 !important;"></span>YOU</span>
+                                       </a>
+											<ul class="sub-menu">
+												<li class="menu-item"> <a href="{% url 'myprofile' %}">Account Details<span class="border-menu"></span></a>
+												</li>
+												<li class="menu-item"> <a href="{% url 'logout' %}">Logout<span class="border-menu"></span></a>
+												</li>
+											</ul>
+										</li>
 					</ul>
 					<div id="sprasa_recent_post_text_widget-11" class="widget post_list_widget">
 						<div class="widget_jl_wrapper">
@@ -112,26 +89,6 @@
 											</span>
 										</div>
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="sprasa_about_us_widget-3" class="widget jellywp_about_us_widget">
-						<div class="widget_jl_wrapper about_widget_content">
-							<div class="jellywp_about_us_widget_wrapper">
-								<div class="social_icons_widget">
-									<ul class="social-icons-list-widget icons_about_widget_display">
-										<li> <a href="#" class="facebook" target="_blank"><i class="jli-facebook"></i></a>
-										</li>
-										<li> <a href="#" class="behance" target="_blank"><i class="jli-behance"></i></a>
-										</li>
-										<li> <a href="#" class="vimeo" target="_blank"><i class="jli-vimeo"></i></a>
-										</li>
-										<li> <a href="#" class="youtube" target="_blank"><i class="jli-youtube"></i></a>
-										</li>
-										<li> <a href="#" class="instagram" target="_blank"><i class="jli-instagram"></i></a>
-										</li>
-									</ul>
 								</div>
 							</div>
 						</div>
