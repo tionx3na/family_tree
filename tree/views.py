@@ -17,4 +17,4 @@ def tree(requests):
 def temp(requests):
     tree = Tree.objects.all()
     print(tree)
-    return render(requests, 'tree/temp.html', {'tree': tree})
+    return render(requests, 'tree/home.html', {'tree': tree})
