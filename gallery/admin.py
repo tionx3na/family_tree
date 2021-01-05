@@ -3,9 +3,17 @@ from . models import *
 
 # Register your models here.
 
+class AddAdmin(admin.ModelAdmin):
+    list_display = ('title', 'user')
+    search_fields = ('title', 'user')
 
-admin.site.register(Pictures)
+
+class PicturesAdmin(admin.ModelAdmin):
+    search_fields = ('add__user', 'add__title')
 
 
-admin.site.register(Add)
+admin.site.register(Pictures, PicturesAdmin)
+
+
+admin.site.register(Add,AddAdmin)
 

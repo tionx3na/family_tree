@@ -157,95 +157,42 @@
 							<div class="jl_sidebar_w">
 								<div id="sprasa_widget_social_counter_c-2" class="widget jl-widget-social-counter">
 									<div class="widget-title">
-										<h2 class="jl_title_c">Stay Connected</h2>
+										<h2 class="jl_title_c">Advertisement</h2>
 									</div>
 									<div class="jl_social_counter social_counter_wraper jl_count_style_2 social_counter_item>">
-										<div class="jlsocial-element jl-facebook jl_radus_e">
-											<a target="_blank" href="https://facebook.com/envato" class="facebook" title="facebook"></a> <span class="jlsocial-element-left">
-                            <i class="jli-facebook" aria-hidden="true"></i>
-                            <span class="num-count">228.8k</span>
-											</span> <span class="jlsocial-element-right">fans</span>
-										</div>
-										<div class="jlsocial-element jl-youtube jl_radus_e">
-											<a target="_blank" href="https://www.youtube.com/user/envato " title="Youtube"></a> <span class="jlsocial-element-left">
-                            <i class="jli-youtube" aria-hidden="true"></i>
-                            <span class="num-count">65.5k</span>
-											</span> <span class="jlsocial-element-right">subscribers</span>
-										</div>
-										<div class="jlsocial-element jl-vimeo jl_radus_e">
-											<a target="_blank" href="https://vimeo.com/beeple" title="vimeo"></a> <span class="jlsocial-element-left">
-                            <i class="jli-vimeo" aria-hidden="true"></i>
-                            <span class="num-count">240</span>
-											</span> <span class="jlsocial-element-right">subscribers</span>
-										</div>
-										<div class="jlsocial-element jl-pinterest jl_radus_e">
-											<a target="_blank" href="https://pinterest.com/envato" class="pinterest" title="pinterest"></a> <span class="jlsocial-element-left">
-                        <i class="jli-pinterest" aria-hidden="true"></i>
-                        <span class="num-count">9.87k</span>
-											</span> <span class="jlsocial-element-right">followers</span>
-										</div>
+										<p>Advertisement holder</p>
 									</div>
 								</div>
+
+
+
 								<div id="sprasa_recent_post_text_widget-9" class="widget post_list_widget">
 									<div class="widget_jl_wrapper">
 										<div class="ettitle">
 											<div class="widget-title">
-												<h2 class="jl_title_c">Art &amp; Fashion</h2>
+												<h2 class="jl_title_c">Recent Blogs</h2>
 											</div>
 										</div>
 										<div class="bt_post_widget">
+
+
+											{% for posts in posts %}
 											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
 												<div class="jl_m_right_w">
 													<div class="jl_m_right_img jl_radus_e">
-														<a href="#">
-															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
+														<a href="blogblogview/{{posts.title}}+title">
+															<img width="120" height="120" src="{{posts.thumbnail.url}}" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
 														</a>
 													</div>
 													<div class="jl_m_right_content">
-														<h2 class="entry-title"> <a href="#" tabindex="-1">This place really good place for reading</a></h2>
-														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
+														<h2 class="entry-title"> <a href="blogblogview/{{posts.title}}+title" tabindex="-1">{{posts.title}}</a></h2>
+														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="blogblogview/{{posts.title}}+title" title="Posts by Spraya" rel="author">{{posts.author}}</a></span><span class="post-date"><i class="jli-pen"></i>{{posts.timestamp}}</span></span>
 													</div>
 												</div>
 											</div>
-											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-												<div class="jl_m_right_w">
-													<div class="jl_m_right_img jl_radus_e">
-														<a href="#">
-															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-														</a>
-													</div>
-													<div class="jl_m_right_content">
-														<h2 class="entry-title"> <a href="#" tabindex="-1">Having fun with DJ and the best music drop</a></h2>
-														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
-													</div>
-												</div>
-											</div>
-											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-												<div class="jl_m_right_w">
-													<div class="jl_m_right_img jl_radus_e">
-														<a href="#">
-															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-														</a>
-													</div>
-													<div class="jl_m_right_content">
-														<h2 class="entry-title"> <a href="#" tabindex="-1">This guitar sound is so good and i need it more</a></h2>
-														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
-													</div>
-												</div>
-											</div>
-											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-												<div class="jl_m_right_w">
-													<div class="jl_m_right_img jl_radus_e">
-														<a href="#">
-															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-														</a>
-													</div>
-													<div class="jl_m_right_content">
-														<h2 class="entry-title"> <a href="#" tabindex="-1">Technology can make your live easy and fast</a></h2>
-														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
-													</div>
-												</div>
-											</div>
+											{% endfor %}
+
+
 										</div>
 									</div>
 								</div>
@@ -255,9 +202,7 @@
 											<h2 class="jl_title_c">Advertisement</h2>
 										</div>
 										<div class="ads300x250-thumb jl_radus_e">
-											<a href="#">
-												<img src="img/380x380.png" alt="">
-											</a>
+											<p>Advertisement placeholder</p>
 										</div>
 									</div>
 								</div>

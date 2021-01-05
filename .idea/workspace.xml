@@ -21,10 +21,32 @@
   <component name="ChangeListManager">
     <list default="true" id="5facc6ff-f495-4757-9006-57fc3dcc08c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/home_main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/home_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/blog_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/blog_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/blog_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/blog_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/familyevents/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/familyevents/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/templates/gallery/gallery_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/templates/gallery/gallery_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/templates/gallery/gallery_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/templates/gallery/gallery_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tree/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tree/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register/templates/register/register_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/register/templates/register/register_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/templates/search/search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/search/templates/search/search_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tree/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +77,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/home/templates/home" />
       <recent name="$PROJECT_DIR$/search/templates/search" />
     </key>
   </component>
@@ -109,10 +132,10 @@
       <screen x="0" y="52" width="1920" height="1028" />
     </state>
     <state x="1016" y="491" key="FileChooserDialogImpl/0.52.1920.1028@0.52.1920.1028" timestamp="1608302574911" />
-    <state x="1146" y="281" width="587" height="570" key="find.popup" timestamp="1609052217504">
+    <state x="1146" y="281" width="587" height="594" key="find.popup" timestamp="1609835304668">
       <screen x="0" y="52" width="1920" height="1028" />
     </state>
-    <state x="1146" y="281" width="587" height="570" key="find.popup/0.52.1920.1028@0.52.1920.1028" timestamp="1609052217504" />
+    <state x="1146" y="281" width="587" height="594" key="find.popup/0.52.1920.1028@0.52.1920.1028" timestamp="1609835304668" />
     <state x="623" y="278" width="672" height="678" key="search.everywhere.popup" timestamp="1608552499953">
       <screen x="0" y="52" width="1920" height="1028" />
     </state>

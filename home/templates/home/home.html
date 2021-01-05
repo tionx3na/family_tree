@@ -241,98 +241,75 @@
 			</div>
 			<div class="mobile_menu_overlay"></div>
 			<div class="jl_home_bw">
+
+
+
+
 				<section class="home_section1">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
 								<div class="jl_mright_wrapper jl_clear_at">
 									<div class="jl_mix_post">
+
+
+
+
+										{% for adminpost in adminpost %}
 										<div class="jl_m_center blog-style-one blog-small-grid">
 											<div class="jl_m_center_w jl_radus_e">
-												<div class="jl_f_img_bg" style="background-image: url('img/1000x650.png');"></div>
-												<a href="#" class="jl_f_img_link"></a> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
-												<div class="text-box"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #eba845;" href="#">Business</a></span>
+												<div class="jl_f_img_bg" style="background-image: url('{{adminpost.thumbnail.url}}');"></div>
+												<a href="homehome/{{adminpost.title}}+title" class="jl_f_img_link"></a> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
+												<div class="text-box"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #eba845;" href="blogblogview/{{adminpost.title}}+title">{{adminpost.tag}}</a></span>
 													<h3>
-                                                                                 <a href="#">It time Rescue restaurant food with these epic saving</a>
+                                                                                 <a href="blogblogview/{{adminpost.title}}+title">{{adminpost.title}}</a>
                                                                               </h3>
 													<span class="jl_post_meta">
-                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-													<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
+                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="blogblogview/{{adminpost.title}}+title" title="Posts by Spraya" rel="author">{{adminpost.author}}</a></span>
+													<span class="post-date"><i class="jli-pen"></i>{{adminpost.timestamp}}</span>
 													<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
 													</span>
 												</div>
 											</div>
 										</div>
+										{% endfor %}
+
+
+
+
+										{% for users in users %}
 										<div class="jl_m_right">
 											<div class="jl_m_right_w">
 												<div class="jl_m_right_img jl_radus_e">
-													<a href="#">
-														<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
+													<a href="{% url 'sresult' users.id %}">
+														<img width="120" height="120" src="{{users.photo.url}}" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
 													</a>
 												</div>
-												<div class="jl_m_right_content"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #91bd3a;" href="#">Inspiration</a></span>
-													<h3 class="entry-title"><a href="#">It’s time to look at the best structures of our society</a></h3>
+												<div class="jl_m_right_content"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #91bd3a;" href="#">New User</a></span>
+													<h3 class="entry-title"><a href="{% url 'sresult' users.id %}">{{users.first_name}} {{users.middle_name}} {{users.last_name}}</a></h3>
 													<span class="jl_post_meta">
-                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-													<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
+                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">{{users.user.username}}</a></span>
+													<span class="post-date"><i class="jli-pen"></i>{{users.user.last_login}}</span>
 													</span>
 												</div>
 											</div>
 										</div>
-										<div class="jl_m_right">
-											<div class="jl_m_right_w">
-												<div class="jl_m_right_img jl_radus_e">
-													<a href="#">
-														<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-													</a>
-												</div>
-												<div class="jl_m_right_content"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #4dcf8f;" href="#">Active</a></span>
-													<h3 class="entry-title"><a href="#">12 effortless maxi dresses to wear all summer</a></h3>
-													<span class="jl_post_meta">
-                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-													<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-													</span>
-												</div>
-											</div>
-										</div>
-										<div class="jl_m_right">
-											<div class="jl_m_right_w">
-												<div class="jl_m_right_img jl_radus_e">
-													<a href="#">
-														<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-													</a>
-												</div>
-												<div class="jl_m_right_content"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #d66300;" href="#">Science</a></span>
-													<h3 class="entry-title"><a href="#">Rescue restaurant food with these epic waste saving</a></h3>
-													<span class="jl_post_meta">
-                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-													<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-													</span>
-												</div>
-											</div>
-										</div>
-										<div class="jl_m_right">
-											<div class="jl_m_right_w">
-												<div class="jl_m_right_img jl_radus_e">
-													<a href="#">
-														<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-													</a>
-												</div>
-												<div class="jl_m_right_content"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #62ce5c;" href="#">Sports</a></span>
-													<h3 class="entry-title"><a href="#">How Covid-19 made us forget our morals on plastic</a></h3>
-													<span class="jl_post_meta">
-                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-													<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-													</span>
-												</div>
-											</div>
-										</div>
+										{% endfor %}
+
+
+
+
+
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
+
+
+
+
 				<section class="home_section2">
 					<div class="container">
 						<div class="row">
@@ -341,132 +318,37 @@
 									<div class="jl_grid_wrap_f jl_clear_at g_3col">
 										<div class="jl-roww content-inner jl-col3 jl-col-row">
 											<div class="jl_sec_title">
-												<h3 class="jl_title_c"><span>Editors Picks Post</span></h3>
-												<p>This is an optional subtitle for post section</p>
+												<h3 class="jl_title_c"><span>Latest Blog Posts.</span></h3>
+												<p>More Blog posts by memebers on Blog section!</p>
 											</div>
+
+
+											{% for post in post %}
 											<div class="jl-grid-cols">
 												<div class="p-wraper post-2959">
 													<div class="jl_grid_w">
 														<div class="jl_img_box jl_radus_e">
-															<a href="#"> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #62ce5c;" href="#">Sports</a></span>
+															<a href="blogblogview/{{post.title}}+title"> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
+																<img width="500" height="350" src="{{post.thumbnail.url}}" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
+															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #62ce5c;" href="#">{{post.tag}}</a></span>
 														</div>
 														<div class="text-box">
-															<h3><a href="#">Wedding guest dresses for every shape, style and budget</a></h3>
+															<h3><a href="blogblogview/{{post.title}}+title">{{post.title}}</a></h3>
 															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
+                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">{{post.author}}</a></span>
+															<span class="post-date"><i class="jli-pen"></i>{{post.timestamp}}</span>
 															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
 															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
+															<p>{{post.overview | safe}}</p>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2957">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#">
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #91bd3a;" href="#">Inspiration</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">This is how much people have made selling old clothes</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2955">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#"> <span class="jl_post_type_icon"><i class="jli-quote-2"></i></span>
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #4dcf8f;" href="#">Active</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">This is how the pandemic has changed our habits</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem Donec vehicula luctus nunc in laoreet...</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2953">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#">
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #eba845;" href="#">Business</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">Nice photo shooting with hand classic style</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2951">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#">
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #eba845;" href="#">Business</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">It’s always fun time and smile in the summer</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2949">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#"> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #7ebdb4;" href="#">Crazy</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">Great time for enjoy your coffee with mountain view</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
-														</div>
-													</div>
-												</div>
-											</div>
+											{% endfor %}
+
 										</div>
 										<div class="jl_lmore_wrap">
-											<div class="jl_lmore_c"> <a href="#" class="jl-load-link"><span>load more</span></a>
+											<div class="jl_lmore_c"> <a href="{% url 'blog' %}" class="jl-load-link"><span>load more</span></a>
 												<span class="jl-load-animation"><span></span></span>
 											</div>
 										</div>
@@ -476,200 +358,10 @@
 						</div>
 					</div>
 				</section>
-				<section class="home_section3">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="jl_sec_title">
-									<h3 class="jl_title_c">Lifestyle News</h3>
-									<p>This is an optional subtitle for post section</p>
-								</div>
-								<div class="jl_mg_wrapper jl_clear_at">
-									<div class="jl_mg_post jl_clear_at">
-										<div class="jl_mg_main">
-											<div class="jl_mg_main_w">
-												<div class="jl_img_box jl_radus_e">
-													<a href="#">
-														<img width="1000" height="650" src="img/1000x650.png" class="attachment-sprasa_feature_large size-sprasa_feature_large wp-post-image" alt="" loading="lazy">
-													</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #4dcf8f;" href="#">Active</a></span>
-												</div>
-												<div class="text-box">
-													<h3 class="entry-title">
-                                                                                 <a href="#" tabindex="-1">Your phone can take the best quality photo &amp; Style</a>
-                                                                              </h3>
-													<span class="jl_post_meta">
-                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-													<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-													<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-													</span>
-													<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet. Aliquam erat volutpat. Suspendisse vulputate porttitor condimentum. Proin viverra orci...</p>
-												</div>
-											</div>
-										</div>
-										<div class="jl_mg_sm">
-											<div class="jl_mg_sm_w">
-												<div class="jl_f_img jl_radus_e">
-													<a href="#">
-														<img width="1000" height="650" src="img/1000x650.png" class="attachment-sprasa_feature_large size-sprasa_feature_large wp-post-image" alt="" loading="lazy">
-													</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #91bd3a;" href="#">Inspiration</a></span>
-												</div>
-												<div class="jl_mg_content">
-													<h3 class="entry-title"><a href="#">The dress style influencers are wearing right now</a></h3>
-													<span class="jl_post_meta">
-                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-													<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-													</span>
-												</div>
-											</div>
-										</div>
-										<div class="jl_mg_sm">
-											<div class="jl_mg_sm_w">
-												<div class="jl_f_img jl_radus_e">
-													<a href="#">
-														<img width="1000" height="650" src="img/1000x650.png" class="attachment-sprasa_feature_large size-sprasa_feature_large wp-post-image" alt="" loading="lazy">
-													</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #d66300;" href="#">Science</a></span>
-												</div>
-												<div class="jl_mg_content">
-													<h3 class="entry-title"><a href="#">It really great holiday and enjoy with the sea</a></h3>
-													<span class="jl_post_meta">
-                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-													<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-													</span>
-												</div>
-											</div>
-										</div>
-										<div class="jl_mg_sm">
-											<div class="jl_mg_sm_w">
-												<div class="jl_f_img jl_radus_e">
-													<a href="#">
-														<img width="1000" height="650" src="img/1000x650.png" class="attachment-sprasa_feature_large size-sprasa_feature_large wp-post-image" alt="" loading="lazy">
-													</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #d63447;" href="#">Health</a></span>
-												</div>
-												<div class="jl_mg_content">
-													<h3 class="entry-title"><a href="#">This is the best camera for short minimal style</a></h3>
-													<span class="jl_post_meta">
-                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-													<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-													</span>
-												</div>
-											</div>
-										</div>
-										<div class="jl_mg_sm">
-											<div class="jl_mg_sm_w">
-												<div class="jl_f_img jl_radus_e">
-													<a href="#">
-														<img width="1000" height="650" src="img/1000x650.png" class="attachment-sprasa_feature_large size-sprasa_feature_large wp-post-image" alt="" loading="lazy">
-													</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #4dcf8f;" href="#">Active</a></span>
-												</div>
-												<div class="jl_mg_content">
-													<h3 class="entry-title"><a href="#">This is my favourite fashion that i watching</a></h3>
-													<span class="jl_post_meta">
-                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-													<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="home_section4">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div id="blockid_3f9d058" class="block-section jl-main-block">
-									<div class="jl_grid_wrap_f jl_clear_at g_4col">
-										<div class="jl-roww content-inner jl-col3 jl-col-row">
-											<div class="jl_sec_title">
-												<h3 class="jl_title_c"><span>Health &amp; Fitness</span></h3>
-												<p>This is an optional subtitle for post section</p>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2691">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#">
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #379e63;" href="#">Techno</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">Together we can make the world a better place</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 21, 2016</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2687">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#">
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #379e63;" href="#">Techno</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">Relaxing with nice view after enjoy with your food</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 21, 2016</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>3 Mins read</span>
-															</span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-1615">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#">
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #eba845;" href="#">Business</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">Best Lighting For Outdoor Photo Shoot Style</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 26, 2014</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-103">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#"> <span class="jl_post_type_icon"><i class="jli-musical-note"></i></span>
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #d63447;" href="#">Health</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">New skill with the height quality camera lens</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 26, 2014</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+
+
+
+
 				<section class="home_section5">
 					<div class="container">
 						<div class="row">
@@ -678,8 +370,8 @@
 									<div class="jl_slide_wrap_f jl_clear_at">
 										<div class="jl-roww content-inner jl-col-none jl-col-row">
 											<div class="jl_sec_title">
-												<h3 class="jl_title_c"><span>Top Of The Week</span></h3>
-												<p>This is an optional subtitle for post section</p>
+												<h3 class="jl_title_c"><span>Advertisements</span></h3>
+												<p>Section for advertisements</p>
 											</div>
 											<div class="jl_ar_top">
 												<div class="jl-w-slider jl_full_feature_w">
@@ -733,6 +425,9 @@
 						</div>
 					</div>
 				</section>
+
+
+
 				<section class="home_section6">
 					<div class="container">
 						<div class="row">
@@ -741,172 +436,42 @@
 									<div class="jl_grid_wrap_f jl_clear_at g_2col">
 										<div class="jl-roww content-inner jl-col3 jl-col-row">
 											<div class="jl_sec_title">
-												<h3 class="jl_title_c"><span>Recent Post</span></h3>
-												<p>This is an optional subtitle for post section</p>
+												<h3 class="jl_title_c"><span>New family Events!</span></h3>
+												<p>For all the family events go to Family Events section!</p>
 											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2949">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#"> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #7ebdb4;" href="#">Crazy</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">Great time for enjoy your coffee with mountain view</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2941">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#">
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #d63447;" href="#">Health</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">This is the best camera for short minimal style</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 24, 2019</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2836">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#">
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #379e63;" href="#">Techno</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">This guitar sound is so good and i need it more</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 24, 2016</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2834">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#">
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #379e63;" href="#">Techno</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">Technology can make your live easy and fast</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 24, 2016</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2832">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#">
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #379e63;" href="#">Techno</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">Sitting right here waiting for you come to me</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 24, 2016</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
-														</div>
-													</div>
-												</div>
-											</div>
+
+
+
+
+
+											{% for events in events %}
+
 											<div class="jl-grid-cols">
 												<div class="p-wraper post-2818">
 													<div class="jl_grid_w">
 														<div class="jl_img_box jl_radus_e">
-															<a href="#">
-																<img width="486" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #d63447;" href="#">Health</a></span>
+															<a href="{% url 'events' %}">
+																<img width="486" height="350" src="{{events.pic.url}}" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
+															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #d63447;" href="#">New</a></span>
 														</div>
 														<div class="text-box">
-															<h3><a href="#">Creative photography ideas from smart devices</a></h3>
+															<h3><a href="{% url 'events' %}">{{events.title}}</a></h3>
 															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 23, 2016</span>
+                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">{{events.author}}</a></span>
+															<span class="post-date"><i class="jli-pen"></i>{{events.date}}</span>
 															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
 															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
+															<p>{{events.content}}</p>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2816">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#"> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #d63447;" href="#">Health</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">Have good food taste then enjoy reading book</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 23, 2016</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-2812">
-													<div class="jl_grid_w">
-														<div class="jl_img_box jl_radus_e">
-															<a href="#"> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
-																<img width="500" height="350" src="img/500x350.png" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
-															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #d63447;" href="#">Health</a></span>
-														</div>
-														<div class="text-box">
-															<h3><a href="#">the best place to celebrate birthday and swim</a></h3>
-															<span class="jl_post_meta">
-                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-															<span class="post-date"><i class="jli-pen"></i>July 23, 2016</span>
-															<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-															</span>
-															<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet....</p>
-														</div>
-													</div>
-												</div>
-											</div>
+											{% endfor %}
+
+
 										</div>
 										<div class="jl_lmore_wrap">
-											<div class="jl_lmore_c"> <a href="#" class="jl-load-link"><span>load more</span></a>
+											<div class="jl_lmore_c"> <a href="{% url 'events' %}" class="jl-load-link"><span>load more</span></a>
 												<span class="jl-load-animation"><span></span></span>
 											</div>
 										</div>
@@ -1026,148 +591,48 @@
 						</div>
 					</div>
 				</section>
-				<section class="home_section7">
+
+
+
+					<section class="home_section2">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<div id="blockid_84d79c5" class="block-section jl-main-block">
-									<div class="jl_grid_wrap_f jl_sf_grid jl_clear_at">
+								<div id="blockid_72be465" class="block-section jl-main-block" data-blockid="blockid_72be465" data-name="jl_mgrid" data-page_max="11" data-page_current="1" data-author="none" data-order="date_post" data-posts_per_page="6" data-offset="5">
+									<div class="jl_grid_wrap_f jl_clear_at g_3col">
 										<div class="jl-roww content-inner jl-col3 jl-col-row">
 											<div class="jl_sec_title">
-												<h3 class="jl_title_c"><span>Today Stories</span></h3>
-												<p>This is an optional subtitle for post section</p>
+												<h3 class="jl_title_c"><span>Latest Gallery Items.</span></h3>
+												<p>More Gallery items by memebers on Gallery section!</p>
 											</div>
+
+
+											{% for gallery in gallery %}
 											<div class="jl-grid-cols">
-												<div class="p-wraper post-1614">
-													<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-														<div class="jl_m_right_w">
-															<div class="jl_m_right_img jl_radus_e">
-																<a href="#">
-																	<img width="450" height="450" src="img/450x450.png" class="attachment-sprasa_feature_small size-sprasa_feature_small wp-post-image" alt="" loading="lazy">
-																</a>
-															</div>
-															<div class="jl_m_right_content"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #eba845;" href="#">Business</a></span>
-																<h2 class="entry-title"><a href="#">It not easy learn to control photo color at first</a></h2>
-																<span class="jl_post_meta">
-                                                                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-																<span class="post-date"><i class="jli-pen"></i>July 26, 2014</span>
-																<span class="post-read-time"><i class="jli-watch-2"></i>3 Mins read</span>
-																</span>
-																<p>Phasellus tellus tellus, imperdiet ut imperdiet Best WrodPress Theme for...</p>
-															</div>
+												<div class="p-wraper post-2959">
+													<div class="jl_grid_w">
+														<div class="jl_img_box jl_radus_e">
+															<a href="gallerygallery_full/{{gallery.title}}+title"> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
+																<img width="500" height="350" src="{{gallery.thumbnail.url}}" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
+															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #62ce5c;" href="gallerygallery_full/{{gallery.title}}+title">New</a></span>
+														</div>
+														<div class="text-box">
+															<h3><a href="gallerygallery_full/{{gallery.title}}+title">{{gallery.title}}</a></h3>
+															<span class="jl_post_meta">
+                                                                                    <span class="jl_author_img_w"><i class="jli-user"></i><a href="gallerygallery_full/{{gallery.title}}+title" title="Posts by Spraya" rel="author">{{gallery.user}}</a></span>
+
+															</span>
+															<p>{{gallery.description}}</p>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-1613">
-													<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-														<div class="jl_m_right_w">
-															<div class="jl_m_right_img jl_radus_e">
-																<a href="#">
-																	<img width="450" height="450" src="img/450x450.png" class="attachment-sprasa_feature_small size-sprasa_feature_small wp-post-image" alt="" loading="lazy">
-																</a>
-															</div>
-															<div class="jl_m_right_content"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #91bd3a;" href="#">Inspiration</a></span>
-																<h2 class="entry-title"><a href="#">Ready to go back home after the sunset view?</a></h2>
-																<span class="jl_post_meta">
-                                                                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-																<span class="post-date"><i class="jli-pen"></i>July 26, 2014</span>
-																<span class="post-read-time"><i class="jli-watch-2"></i>3 Mins read</span>
-																</span>
-																<p>Phasellus tellus tellus, imperdiet ut imperdiet Best WrodPress Theme for...</p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-1612">
-													<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-														<div class="jl_m_right_w">
-															<div class="jl_m_right_img jl_radus_e">
-																<a href="#">
-																	<img width="450" height="450" src="img/450x450.png" class="attachment-sprasa_feature_small size-sprasa_feature_small wp-post-image" alt="" loading="lazy">
-																</a>
-															</div>
-															<div class="jl_m_right_content"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #91bd3a;" href="#">Inspiration</a></span>
-																<h2 class="entry-title"><a href="#">It not just a photo but it best inspiration</a></h2>
-																<span class="jl_post_meta">
-                                                                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-																<span class="post-date"><i class="jli-pen"></i>July 26, 2014</span>
-																<span class="post-read-time"><i class="jli-watch-2"></i>3 Mins read</span>
-																</span>
-																<p>Phasellus tellus tellus, imperdiet ut imperdiet Best WrodPress Theme for...</p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-1611">
-													<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-														<div class="jl_m_right_w">
-															<div class="jl_m_right_img jl_radus_e">
-																<a href="#">
-																	<img width="450" height="450" src="img/450x450.png" class="attachment-sprasa_feature_small size-sprasa_feature_small wp-post-image" alt="" loading="lazy">
-																</a>
-															</div>
-															<div class="jl_m_right_content"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #eba845;" href="#">Business</a></span>
-																<h2 class="entry-title"><a href="#">Good day to take a photo with your favorite style</a></h2>
-																<span class="jl_post_meta">
-                                                                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-																<span class="post-date"><i class="jli-pen"></i>July 26, 2014</span>
-																<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-																</span>
-																<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet...</p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-1610">
-													<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-														<div class="jl_m_right_w">
-															<div class="jl_m_right_img jl_radus_e">
-																<a href="#">
-																	<img width="450" height="450" src="img/450x450.png" class="attachment-sprasa_feature_small size-sprasa_feature_small wp-post-image" alt="" loading="lazy">
-																</a>
-															</div>
-															<div class="jl_m_right_content"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #91bd3a;" href="#">Inspiration</a></span>
-																<h2 class="entry-title"><a href="#">halloween is coming soon what we going to do</a></h2>
-																<span class="jl_post_meta">
-                                                                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-																<span class="post-date"><i class="jli-pen"></i>July 26, 2014</span>
-																<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
-																</span>
-																<p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet...</p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="jl-grid-cols">
-												<div class="p-wraper post-1609">
-													<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-														<div class="jl_m_right_w">
-															<div class="jl_m_right_img jl_radus_e">
-																<a href="#">
-																	<img width="450" height="450" src="img/450x450.png" class="attachment-sprasa_feature_small size-sprasa_feature_small wp-post-image" alt="" loading="lazy">
-																</a>
-															</div>
-															<div class="jl_m_right_content"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #7ebdb4;" href="#">Crazy</a></span>
-																<h2 class="entry-title"><a href="#">We need to connect WiFi for make it work Well</a></h2>
-																<span class="jl_post_meta">
-                                                                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span>
-																<span class="post-date"><i class="jli-pen"></i>July 26, 2014</span>
-																<span class="post-read-time"><i class="jli-watch-2"></i>3 Mins read</span>
-																</span>
-																<p>Phasellus tellus tellus, imperdiet ut imperdiet Best WrodPress Theme for...</p>
-															</div>
-														</div>
-													</div>
-												</div>
+											{% endfor %}
+
+										</div>
+										<div class="jl_lmore_wrap">
+											<div class="jl_lmore_c"> <a href="{% url 'gallery' %}" class="jl-load-link"><span>load more</span></a>
+												<span class="jl-load-animation"><span></span></span>
 											</div>
 										</div>
 									</div>
@@ -1176,6 +641,12 @@
 						</div>
 					</div>
 				</section>
+				<br>
+				<br>
+				<br>
+
+
+
 			</div>
 			<!-- end content -->
 			<!-- Start footer -->

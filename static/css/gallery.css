@@ -1,129 +1,99 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
-body {
-  font-family: "Inconsolata", monospace;
-  margin: 0;
+.box{
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease-in-out;
 }
-
-button {
-  cursor: pointer;
+.box:hover{ box-shadow: 0 0 0 5px rgba(0,0,0,0.1); }
+.box:before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    opacity: 0.9;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+    animation: animate 5s infinite linear;
 }
-
-#portfolio {
-  width: 100%;
-  min-height: 100vh;
-  background: #ffffff;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 2px;
+.box:hover:before{
+    height: 280px;
+    width: 280px;
+    top: -55px;
+    right: -37px;
 }
-
-.project {
-  position: relative;
-  background: #F2DAD7;
-  overflow: hidden;
+.box img{
+    width: 100%;
+    height: auto;
+    transition: all 0.4s ease-in-out;
 }
-.project img {
-  position: absolute;
-  opacity: 0.9;
+.box:hover img{ filter: grayscale(100%); }
+.box .box-content{
+    color: #fff;
+    text-align: center;
+    width: 200px;
+    opacity: 0;
+    filter: blur(10px);
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    z-index: 2;
+    transition: all 0.4s ease-in-out;
 }
-.project p {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  padding: 1em 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  z-index: 3;
+.box:hover .box-content{
+    filter: blur(0);
+    opacity: 1;
+    top: 80px;
 }
-.project .grid__title {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  white-space: nowrap;
-  bottom: 0;
-  font-weight: 100;
-  font-size: 0.8em;
-  z-index: 3;
-  text-transform: uppercase;
-  color: #474545;
-  letter-spacing: 2px;
+.box .title{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+    margin: 0 0 2px;
 }
-
-.project:hover .grid__overlay {
-  transform: translateY(0%);
+.box .post{
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-transform: lowercase;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+    display: block;
 }
-
-.grid__overlay {
-  background: rgba(229, 182, 177, 0.9);
-  height: 100%;
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  position: relative;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  transform: translateY(101%);
-  transition: all 0.3s ease-in-out;
+.box .icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    bottom: 5px;
+    left: 13px;
 }
-.grid__overlay button {
-  background: none;
-  outline: none;
-  font-weight: 100;
-  letter-spacing: 2px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  text-transform: uppercase;
-  padding: 10px;
+.box .icon li a{
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    margin: 7px 0;
+    border-radius: 50% 50% 50% 0;
+    display: block;
+    transition: all 0.3s;
+    animation: animate 5s infinite linear;
 }
-.grid__overlay button:hover {
-  transition: all 0.3s ease-in-out;
-  background: #ffffff;
-  color: #D1A39E;
-  transform: scale(1.05);
+.box .icon li a:hover{ box-shadow: 0 0 0 2px #fff inset; }
+@keyframes animate{
+    0%{ background-color: #00b894; }
+    20%{ background-color: #00cec9; }
+    40%{ background-color: #0984e3; }
+    60%{ background-color: #6c5ce7; }
+    80%{ background-color: #e84393; }
+    100%{ background-color: #00b894; }
 }
-
-.overlay {
-  position: fixed;
-  background: rgba(71, 69, 69, 0.7);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-  z-index: 3;
-}
-
-.overlay.open {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-}
-
-.overlay__inner {
-  background: #ffffff;
-  width: 700px;
-  padding: 20px;
-  position: relative;
-  opacity: 1;
-}
-
-.close {
-  position: absolute;
-  top: 3px;
-  right: 10px;
-  background: none;
-  outline: 0;
-  color: #474545;
-  border: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.close:hover {
-  color: #D1A39E;
-}
-
-.project__image {
-  margin-left: -50%;
+@media only screen and (max-width:990px){
+    .box { margin: 0 0 30px; }
 }

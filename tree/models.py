@@ -16,8 +16,8 @@ class Tree(models.Model):
     class Meta:
         db_table = ''
         managed = True
-        verbose_name = 'User Information'
-        verbose_name_plural = 'User Informations'
+        verbose_name = 'Family Tree'
+        verbose_name_plural = 'Family Tree Informations'
 
     def __str__(self):
         return self.name

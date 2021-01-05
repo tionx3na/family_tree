@@ -14,7 +14,7 @@ class DateInput(forms.DateInput):
 class MyProfile(forms.Form):
 
     CHOICES = (
-        ('Not Entered', 'Choose'),
+        (' ', 'Choose'),
         ('AB+', 'AB+'),
         ('AB-', 'AB-'),
         ('A+', 'A+'),
@@ -31,9 +31,10 @@ class MyProfile(forms.Form):
     last_name = forms.CharField(max_length=20, required=False, label='Last Name')
     nick_name = forms.CharField(max_length=20, required=False, label= 'Nick Name')
     thumbnail = forms.FileField(label='Upload a profile Picture')
+    description = forms.CharField(max_length=100, required=False, label='About you in a sentence')
     mobile1 = forms.CharField(min_length=7, required=False, label='Mobile Number 1', validators=[RegexValidator('^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed")])
     mobile2 = forms.CharField(min_length=7, required=False, label='Mobile Number 2',  validators=[RegexValidator('^\+?1?\d{9,15}$',message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed")])
-    Whatsapp = forms.CharField(min_length=7, required=False, label='Whatsapp Number',  validators=[RegexValidator('^\+?1?\d{9,15}$',message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed")])
+    whatsapp = forms.CharField(min_length=7, required=False, label='Whatsapp Number',  validators=[RegexValidator('^\+?1?\d{9,15}$',message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed")])
     email = forms.CharField(max_length=100, required=False, label='E-mail Address')
     father = forms.CharField(max_length=50, required=False, label='Father\'s Name')
     mother = forms.CharField(max_length=50, required=False, label='Mothers\'s Name')

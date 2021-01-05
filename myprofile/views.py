@@ -3,6 +3,7 @@ from . import forms
 from django.contrib.auth.models import User, auth
 from django.contrib.auth import logout
 from login.models import ActiveInvite
+from blog.models import Post
 from django.contrib.auth.decorators import login_required
 import datetime
 
@@ -35,13 +36,15 @@ def userlogout(request):
 
 def profileedit(request):
     activeinvite = ActiveInvite.objects.get(user=request.user)
-    form = forms.MyProfile(initial={'first_name': activeinvite.first_name, 'middle_name': activeinvite.middle_name, 'last_name': activeinvite.last_name, 'nick_name': activeinvite.nick_name, 'mobile1': activeinvite.mobile1, 'mobile2': activeinvite.mobile2, 'whatsapp': activeinvite.whatsapp, 'email': activeinvite.email, 'father': activeinvite.father, 'mother': activeinvite.mother, 'address': activeinvite.address, 'temp_address': activeinvite.temp_address, 'parish': activeinvite.parish, 'dob': activeinvite.dob, 'blood': activeinvite.blood, 'occupation': activeinvite.occupation, 'company': activeinvite.company, 'occupation_place': activeinvite.occupation_place, 'spouse_name': activeinvite.spouse_name, 'spouse_father': activeinvite.spouse_father, 'spouse_mother': activeinvite.spouse_mother, 'wedding_date': activeinvite.wedding_date})
+    posts = Post.objects.all().order_by('id')[:4][::-1]
+    form = forms.MyProfile(initial={'first_name': activeinvite.first_name, 'middle_name': activeinvite.middle_name, 'last_name': activeinvite.last_name, 'description': activeinvite.description, 'nick_name': activeinvite.nick_name, 'mobile1': activeinvite.mobile1, 'mobile2': activeinvite.mobile2, 'whatsapp': activeinvite.whatsapp, 'email': activeinvite.email, 'father': activeinvite.father, 'mother': activeinvite.mother, 'address': activeinvite.address, 'temp_address': activeinvite.temp_address, 'parish': activeinvite.parish, 'dob': activeinvite.dob, 'blood': activeinvite.blood, 'occupation': activeinvite.occupation, 'company': activeinvite.company, 'occupation_place': activeinvite.occupation_place, 'spouse_name': activeinvite.spouse_name, 'spouse_father': activeinvite.spouse_father, 'spouse_mother': activeinvite.spouse_mother, 'wedding_date': activeinvite.wedding_date})
     now = datetime.datetime.now()
     now_full = now.strftime("%Y-%m-%d")
     if request.method == 'POST':
         first_name = request.POST.get('first_name')
         middle_name = request.POST.get('middle_name')
         last_name = request.POST.get('last_name')
+        desc = request.POST.get('description')
         pro_pic = request.FILES.getlist('thumbnail')
         nick_name = request.POST.get('nick_name')
         mobile1 = request.POST.get('mobile1')
@@ -57,7 +60,7 @@ def profileedit(request):
         blood = request.POST.get('blood')
         occupation = request.POST.get('occupation')
         company = request.POST.get('company')
-        occupation_place = request.POST.get('occupation_pace')
+        occupation_place = request.POST.get('occupation_place')
         spouse_name = request.POST.get('spouse_name')
         spouse_father = request.POST.get('spouse_father')
         spouse_mother = request.POST.get('spouse_mother')
@@ -83,6 +86,7 @@ def profileedit(request):
             activeinvite.first_name = first_name
             activeinvite.middle_name = middle_name
             activeinvite.last_name = last_name
+            activeinvite.description = desc
             for pic in pro_pic:
                 activeinvite.photo = pic
             activeinvite.nick_name = nick_name
@@ -104,7 +108,7 @@ def profileedit(request):
             activeinvite.spouse_father = spouse_father
             activeinvite.spouse_mother = spouse_mother
             activeinvite.wedding_date = wedding_date
-            ActiveInvite.date_edited = now_full
+            activeinvite.date_edited = now_full
             #activeinvite.children_number = children_number
             #activeinvite.child1 = child1
             #activeinvite.child2 = child2
@@ -114,7 +118,7 @@ def profileedit(request):
             return redirect('myprofile')
     profile = ActiveInvite.objects.filter(user=request.user)
 
-    return render(request,'myprofile/myprofile_edit.html', {'form': form, 'profile': profile})
+    return render(request,'myprofile/myprofile_edit.html', {'form': form, 'profile': profile, 'posts': posts})
 
 
 

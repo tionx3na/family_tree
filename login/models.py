@@ -12,6 +12,7 @@ class ActiveInvite(models.Model):
     middle_name = models.CharField(max_length=20,null=True)
     last_name = models.CharField(max_length=20,null=True)
     nick_name = models.CharField(max_length=20, null=True)
+    description  = models.CharField(max_length=100, null=True)
     mobile1 = models.CharField(max_length=20, null=True)
     mobile2 = models.CharField(max_length=20, null=True)
     whatsapp = models.CharField(max_length=20, null=True)

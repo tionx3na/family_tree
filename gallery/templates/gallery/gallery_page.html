@@ -104,27 +104,35 @@
 				</div>
 			</div>
 <!-- partial:index.partial.html -->
-<section id="portfolio">
-    {% for gallery in gallery %}
-    <div class="project">
-      <img class="project__image" src="{{gallery.thumbnail.url}}" />
-      <p>{{gallery.title}}</p>
-      <h3 class="grid__title"> {{gallery.user}}</h3>
-      <div class="grid__overlay">
-          <form action="gallerygallery_full/{{gallery.title}}+title">
-        <button >view more</button>
-          </form>
-      </div>
+<div class="container">
+    <div class="row">
+		   {% for gallery in gallery %}
+        <div class="col-md-4 col-sm-6">
+            <div class="box">
+                <img src="{{gallery.thumbnail.url}}">
+                <div class="box-content">
+					<h3 class="title"><a href="gallerygallery_full/{{gallery.title}}+title">{{gallery.title}}</a></h3>
+                    <span class="post"> {{gallery.user}}</span>
+                </div>
+                <ul class="icon">
+                    <li><a href="gallerygallery_full/{{gallery.title}}+title"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
+        </div>
+		{% endfor %}
     </div>
-    {% endfor %}
+</div>
 
 
-  </section>
 <!-- partial -->
 
 <div class="auth">
     <br>
     <br>
+	<br>
+
+
+
 <hr>
 </div>
 

@@ -25,6 +25,8 @@
 	<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" media="all" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	<link rel="stylesheet" href="{% static 'css/search.css' %}">
+	 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="{% static 'css/card.css' %}">
 	<!-- end head -->
 </head>
 
@@ -87,8 +89,7 @@
 										<div class="jlm_w"><span class="jlma"></span><span class="jlmb"></span><span class="jlmc"></span>
 										</div>
 									</div>
-									<div class="search_header_wrapper search_form_menu_personal_click"><i class="jli-search"></i>
-									</div>
+
 									<div class="jl_day_night jl_day_en"> <span class="jl-night-toggle-icon">
                                     <span class="jl_moon">
                                     <i class="jli-moon"></i>
@@ -277,50 +278,26 @@
 									<div class="jl-content">
 										<div class="content-wrap">
 											<div class="woocommerce-notices-wrapper"></div>
-											<aside class="result-wrap">
-												<p class="woocommerce-result-count">Showing 1–12 of 23 results</p>
-												<form class="woocommerce-ordering" method="get">
-													<select name="orderby" class="orderby" aria-label="Shop order">
-														<option value="menu_order" selected="selected">Default sorting</option>
-														<option value="popularity">Sort by popularity</option>
-														<option value="rating">Sort by average rating</option>
-														<option value="date">Sort by latest</option>
-														<option value="price">Sort by price: low to high</option>
-														<option value="price-desc">Sort by price: high to low</option>
-													</select>
-													<input type="hidden" name="paged" value="1">
-													<input type="hidden" name="import_theme_demo" value="0">
-												</form>
-											</aside>
+
+
+											{% for name in first_name %}
+											<div class="col-md-4">
+												<br>
+												<br>
+											<div class="profile-card-4 text-center"><img src="{{name.photo.url}}" class="img img-responsive">
+												<div class="profile-content">
+													<a href="{% url 'sresult' name.id %}"> <div class="profile-name">{{name.first_name}} {{name.middle_name}} {{name.last_name}}
+														<p>@{{name.user.username}}</p>
+													</div></a>
+													<div class="profile-description">{{name.description}}</div>
+												</div>
+											</div>
+										</div>
+											{% endfor %}
 
 
 
-											<div class="products-outer">
 
-
-												<div class="products wc-col-4">
-													{% for name in first_name %}
-													<div class="jl-wc-col product type-product post-47 status-publish first instock product_cat-clothing product_cat-hoodies has-post-thumbnail shipping-taxable purchasable product-type-simple">
-														<div class="p-feat">
-															<div class="product-thumb">
-																<a href="{% url 'sresult' name.id %}" class="woocommerce-loop-product-link">
-																	<img width="380" height="380" src="{{name.photo.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy">
-																</a>
-																<div class="product-buttons  cart-tooltips"><a href="?add-to-cart=47" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="47" data-product_sku="" aria-label="Add “alarm clock” to your cart" rel="nofollow">Add to cart</a>
-																</div>
-															</div>
-														</div>
-														<div class="product-loop-content clearfix">
-															<h2 class="woocommerce-loop-product__title h4">
-            <a href="{% url 'sresult' name.id %}" class="woocommerce-loop-product-link p-url">{{name.first_name}} {{name.middle_name}} {{name.last_name}}</a>
-        </h2>
-															<div ><span style="width:90%">Username: <strong class="rating">{{name.user.username}}</strong></span>
-															</div> <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>Phone: {{name.mobile1}}</bdi>
-															</span>
-															</span>
-														</div>
-													</div>
-													{% endfor %}
 
 
 												{% elif last_name %}
@@ -330,49 +307,19 @@
 									<div class="jl-content">
 										<div class="content-wrap">
 											<div class="woocommerce-notices-wrapper"></div>
-											<aside class="result-wrap">
-												<p class="woocommerce-result-count">Showing 1–12 of 23 results</p>
-												<form class="woocommerce-ordering" method="get">
-													<select name="orderby" class="orderby" aria-label="Shop order">
-														<option value="menu_order" selected="selected">Default sorting</option>
-														<option value="popularity">Sort by popularity</option>
-														<option value="rating">Sort by average rating</option>
-														<option value="date">Sort by latest</option>
-														<option value="price">Sort by price: low to high</option>
-														<option value="price-desc">Sort by price: high to low</option>
-													</select>
-													<input type="hidden" name="paged" value="1">
-													<input type="hidden" name="import_theme_demo" value="0">
-												</form>
-											</aside>
-
-
-
-											<div class="products-outer">
-
-
-												<div class="products wc-col-4">
-													{% for name in last_name %}
-													<div class="jl-wc-col product type-product post-47 status-publish first instock product_cat-clothing product_cat-hoodies has-post-thumbnail shipping-taxable purchasable product-type-simple">
-														<div class="p-feat">
-															<div class="product-thumb">
-																<a href="shop-single.html" class="woocommerce-loop-product-link">
-																	<img width="380" height="380" src="{{name.photo.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy">
-																</a>
-																<div class="product-buttons  cart-tooltips"><a href="?add-to-cart=47" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="47" data-product_sku="" aria-label="Add “alarm clock” to your cart" rel="nofollow">Add to cart</a>
-																</div>
-															</div>
-														</div>
-														<div class="product-loop-content clearfix">
-															<h2 class="woocommerce-loop-product__title h4">
-            <a href="#" class="woocommerce-loop-product-link p-url">{{name.first_name}} {{name.middle_name}} {{name.last_name}}</a>
-        </h2>
-															<div ><span style="width:90%">Username: <strong class="rating">{{name.user.username}}</strong></span>
-															</div> <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>Phone: {{name.mobile1}}</bdi>
-															</span>
-															</span>
-														</div>
-													</div>
+											{% for name in last_name %}
+											<div class="col-md-4">
+												<br>
+												<br>
+											<div class="profile-card-4 text-center"><img src="{{name.photo.url}}" class="img img-responsive">
+												<div class="profile-content">
+													<a href="{% url 'sresult' name.id %}"> <div class="profile-name">{{name.first_name}} {{name.middle_name}} {{name.last_name}}
+														<p>@{{name.user.username}}</p>
+													</div></a>
+													<div class="profile-description">{{name.description}}</div>
+												</div>
+											</div>
+										</div>
 													{% endfor %}
 
 													{% elif mobile %}
@@ -382,49 +329,20 @@
 									<div class="jl-content">
 										<div class="content-wrap">
 											<div class="woocommerce-notices-wrapper"></div>
-											<aside class="result-wrap">
-												<p class="woocommerce-result-count">Showing 1–12 of 23 results</p>
-												<form class="woocommerce-ordering" method="get">
-													<select name="orderby" class="orderby" aria-label="Shop order">
-														<option value="menu_order" selected="selected">Default sorting</option>
-														<option value="popularity">Sort by popularity</option>
-														<option value="rating">Sort by average rating</option>
-														<option value="date">Sort by latest</option>
-														<option value="price">Sort by price: low to high</option>
-														<option value="price-desc">Sort by price: high to low</option>
-													</select>
-													<input type="hidden" name="paged" value="1">
-													<input type="hidden" name="import_theme_demo" value="0">
-												</form>
-											</aside>
-
-
-
-											<div class="products-outer">
-
-												<div class="products wc-col-4">
-													{% for name in mobile %}
-													<div class="jl-wc-col product type-product post-47 status-publish first instock product_cat-clothing product_cat-hoodies has-post-thumbnail shipping-taxable purchasable product-type-simple">
-														<div class="p-feat">
-															<div class="product-thumb">
-																<a href="shop-single.html" class="woocommerce-loop-product-link">
-																	<img width="380" height="380" src="{{name.photo.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy">
-																</a>
-																<div class="product-buttons  cart-tooltips"><a href="?add-to-cart=47" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="47" data-product_sku="" aria-label="Add “alarm clock” to your cart" rel="nofollow">Add to cart</a>
-																</div>
-															</div>
-														</div>
-														<div class="product-loop-content clearfix">
-															<h2 class="woocommerce-loop-product__title h4">
-            <a href="#" class="woocommerce-loop-product-link p-url">{{name.first_name}} {{name.middle_name}} {{name.last_name}}</a>
-        </h2>
-															<div ><span style="width:90%">Username: <strong class="rating">{{name.user.username}}</strong></span>
-															</div> <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>Phone: {{name.mobile1}}</bdi>
-															</span>
-															</span>
-														</div>
-													</div>
-													{% endfor %}
+											{% for name in mobile %}
+											<div class="col-md-4">
+												<br>
+												<br>
+											<div class="profile-card-4 text-center"><img src="{{name.photo.url}}" class="img img-responsive">
+												<div class="profile-content">
+													<a href="{% url 'sresult' name.id %}"> <div class="profile-name">{{name.first_name}} {{name.middle_name}} {{name.last_name}}
+														<p>@{{name.user.username}}</p>
+													</div></a>
+													<div class="profile-description">{{name.description}}</div>
+												</div>
+											</div>
+										</div>
+											{% endfor %}
 
 													{% elif email %}
 
@@ -433,48 +351,19 @@
 									<div class="jl-content">
 										<div class="content-wrap">
 											<div class="woocommerce-notices-wrapper"></div>
-											<aside class="result-wrap">
-												<p class="woocommerce-result-count">Showing 1–12 of 23 results</p>
-												<form class="woocommerce-ordering" method="get">
-													<select name="orderby" class="orderby" aria-label="Shop order">
-														<option value="menu_order" selected="selected">Default sorting</option>
-														<option value="popularity">Sort by popularity</option>
-														<option value="rating">Sort by average rating</option>
-														<option value="date">Sort by latest</option>
-														<option value="price">Sort by price: low to high</option>
-														<option value="price-desc">Sort by price: high to low</option>
-													</select>
-													<input type="hidden" name="paged" value="1">
-													<input type="hidden" name="import_theme_demo" value="0">
-												</form>
-											</aside>
-
-
-
-											<div class="products-outer">
-
-												<div class="products wc-col-4">
-													{% for name in email %}
-													<div class="jl-wc-col product type-product post-47 status-publish first instock product_cat-clothing product_cat-hoodies has-post-thumbnail shipping-taxable purchasable product-type-simple">
-														<div class="p-feat">
-															<div class="product-thumb">
-																<a href="shop-single.html" class="woocommerce-loop-product-link">
-																	<img width="380" height="380" src="{{name.photo.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy">
-																</a>
-																<div class="product-buttons  cart-tooltips"><a href="?add-to-cart=47" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="47" data-product_sku="" aria-label="Add “alarm clock” to your cart" rel="nofollow">Add to cart</a>
-																</div>
-															</div>
-														</div>
-														<div class="product-loop-content clearfix">
-															<h2 class="woocommerce-loop-product__title h4">
-            <a href="#" class="woocommerce-loop-product-link p-url">{{name.first_name}} {{name.middle_name}} {{name.last_name}}</a>
-        </h2>
-															<div ><span style="width:90%">Username: <strong class="rating">{{name.user.username}}</strong></span>
-															</div> <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>Phone: {{name.mobile1}}</bdi>
-															</span>
-															</span>
-														</div>
-													</div>
+											{% for name in email %}
+											<div class="col-md-4">
+												<br>
+												<br>
+											<div class="profile-card-4 text-center"><img src="{{name.photo.url}}" class="img img-responsive">
+												<div class="profile-content">
+													<a href="{% url 'sresult' name.id %}"> <div class="profile-name">{{name.first_name}} {{name.middle_name}} {{name.last_name}}
+														<p>@{{name.user.username}}</p>
+													</div></a>
+													<div class="profile-description">{{name.description}}</div>
+												</div>
+											</div>
+										</div>
 													{% endfor %}
 
 													{% elif father %}
@@ -485,48 +374,19 @@
 									<div class="jl-content">
 										<div class="content-wrap">
 											<div class="woocommerce-notices-wrapper"></div>
-											<aside class="result-wrap">
-												<p class="woocommerce-result-count">Showing 1–12 of 23 results</p>
-												<form class="woocommerce-ordering" method="get">
-													<select name="orderby" class="orderby" aria-label="Shop order">
-														<option value="menu_order" selected="selected">Default sorting</option>
-														<option value="popularity">Sort by popularity</option>
-														<option value="rating">Sort by average rating</option>
-														<option value="date">Sort by latest</option>
-														<option value="price">Sort by price: low to high</option>
-														<option value="price-desc">Sort by price: high to low</option>
-													</select>
-													<input type="hidden" name="paged" value="1">
-													<input type="hidden" name="import_theme_demo" value="0">
-												</form>
-											</aside>
-
-
-
-											<div class="products-outer">
-
-												<div class="products wc-col-4">
-													{% for name in father %}
-													<div class="jl-wc-col product type-product post-47 status-publish first instock product_cat-clothing product_cat-hoodies has-post-thumbnail shipping-taxable purchasable product-type-simple">
-														<div class="p-feat">
-															<div class="product-thumb">
-																<a href="shop-single.html" class="woocommerce-loop-product-link">
-																	<img width="380" height="380" src="{{name.photo.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy">
-																</a>
-																<div class="product-buttons  cart-tooltips"><a href="?add-to-cart=47" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="47" data-product_sku="" aria-label="Add “alarm clock” to your cart" rel="nofollow">Add to cart</a>
-																</div>
-															</div>
-														</div>
-														<div class="product-loop-content clearfix">
-															<h2 class="woocommerce-loop-product__title h4">
-            <a href="#" class="woocommerce-loop-product-link p-url">{{name.first_name}} {{name.middle_name}} {{name.last_name}}</a>
-        </h2>
-															<div ><span style="width:90%">Username: <strong class="rating">{{name.user.username}}</strong></span>
-															</div> <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>Phone: {{name.mobile1}}</bdi>
-															</span>
-															</span>
-														</div>
-													</div>
+											{% for name in father %}
+										<div class="col-md-4">
+												<br>
+												<br>
+											<div class="profile-card-4 text-center"><img src="{{name.photo.url}}" class="img img-responsive">
+												<div class="profile-content">
+													<a href="{% url 'sresult' name.id %}"> <div class="profile-name">{{name.first_name}} {{name.middle_name}} {{name.last_name}}
+														<p>@{{name.user.username}}</p>
+													</div></a>
+													<div class="profile-description">{{name.description}}</div>
+												</div>
+											</div>
+										</div>
 													{% endfor %}
 
 													{% elif mother %}
@@ -537,48 +397,19 @@
 									<div class="jl-content">
 										<div class="content-wrap">
 											<div class="woocommerce-notices-wrapper"></div>
-											<aside class="result-wrap">
-												<p class="woocommerce-result-count">Showing 1–12 of 23 results</p>
-												<form class="woocommerce-ordering" method="get">
-													<select name="orderby" class="orderby" aria-label="Shop order">
-														<option value="menu_order" selected="selected">Default sorting</option>
-														<option value="popularity">Sort by popularity</option>
-														<option value="rating">Sort by average rating</option>
-														<option value="date">Sort by latest</option>
-														<option value="price">Sort by price: low to high</option>
-														<option value="price-desc">Sort by price: high to low</option>
-													</select>
-													<input type="hidden" name="paged" value="1">
-													<input type="hidden" name="import_theme_demo" value="0">
-												</form>
-											</aside>
-
-
-
-											<div class="products-outer">
-
-												<div class="products wc-col-4">
-													{% for name in mother %}
-													<div class="jl-wc-col product type-product post-47 status-publish first instock product_cat-clothing product_cat-hoodies has-post-thumbnail shipping-taxable purchasable product-type-simple">
-														<div class="p-feat">
-															<div class="product-thumb">
-																<a href="shop-single.html" class="woocommerce-loop-product-link">
-																	<img width="380" height="380" src="{{name.photo.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy">
-																</a>
-																<div class="product-buttons  cart-tooltips"><a href="?add-to-cart=47" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="47" data-product_sku="" aria-label="Add “alarm clock” to your cart" rel="nofollow">Add to cart</a>
-																</div>
-															</div>
-														</div>
-														<div class="product-loop-content clearfix">
-															<h2 class="woocommerce-loop-product__title h4">
-            <a href="#" class="woocommerce-loop-product-link p-url">{{name.first_name}} {{name.middle_name}} {{name.last_name}}</a>
-        </h2>
-															<div ><span style="width:90%">Username: <strong class="rating">{{name.user.username}}</strong></span>
-															</div> <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>Phone: {{name.mobile1}}</bdi>
-															</span>
-															</span>
-														</div>
-													</div>
+											{% for name in mother %}
+										<div class="col-md-4">
+												<br>
+												<br>
+											<div class="profile-card-4 text-center"><img src="{{name.photo.url}}" class="img img-responsive">
+												<div class="profile-content">
+													<a href="{% url 'sresult' name.id %}"> <div class="profile-name">{{name.first_name}} {{name.middle_name}} {{name.last_name}}
+														<p>@{{name.user.username}}</p>
+													</div></a>
+													<div class="profile-description">{{name.description}}</div>
+												</div>
+											</div>
+										</div>
 													{% endfor %}
 
 													{% elif wife %}
@@ -589,48 +420,19 @@
 									<div class="jl-content">
 										<div class="content-wrap">
 											<div class="woocommerce-notices-wrapper"></div>
-											<aside class="result-wrap">
-												<p class="woocommerce-result-count">Showing 1–12 of 23 results</p>
-												<form class="woocommerce-ordering" method="get">
-													<select name="orderby" class="orderby" aria-label="Shop order">
-														<option value="menu_order" selected="selected">Default sorting</option>
-														<option value="popularity">Sort by popularity</option>
-														<option value="rating">Sort by average rating</option>
-														<option value="date">Sort by latest</option>
-														<option value="price">Sort by price: low to high</option>
-														<option value="price-desc">Sort by price: high to low</option>
-													</select>
-													<input type="hidden" name="paged" value="1">
-													<input type="hidden" name="import_theme_demo" value="0">
-												</form>
-											</aside>
-
-
-
-											<div class="products-outer">
-
-												<div class="products wc-col-4">
-													{% for name in wife %}
-													<div class="jl-wc-col product type-product post-47 status-publish first instock product_cat-clothing product_cat-hoodies has-post-thumbnail shipping-taxable purchasable product-type-simple">
-														<div class="p-feat">
-															<div class="product-thumb">
-																<a href="shop-single.html" class="woocommerce-loop-product-link">
-																	<img width="380" height="380" src="{{name.photo.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy">
-																</a>
-																<div class="product-buttons  cart-tooltips"><a href="?add-to-cart=47" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="47" data-product_sku="" aria-label="Add “alarm clock” to your cart" rel="nofollow">Add to cart</a>
-																</div>
-															</div>
-														</div>
-														<div class="product-loop-content clearfix">
-															<h2 class="woocommerce-loop-product__title h4">
-            <a href="#" class="woocommerce-loop-product-link p-url">{{name.first_name}} {{name.middle_name}} {{name.last_name}}</a>
-        </h2>
-															<div ><span style="width:90%">Username: <strong class="rating">{{name.user.username}}</strong></span>
-															</div> <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>Phone: {{name.mobile1}}</bdi>
-															</span>
-															</span>
-														</div>
-													</div>
+											{% for name in wife %}
+										<div class="col-md-4">
+												<br>
+												<br>
+											<div class="profile-card-4 text-center"><img src="{{name.photo.url}}" class="img img-responsive">
+												<div class="profile-content">
+													<a href="{% url 'sresult' name.id %}"> <div class="profile-name">{{name.first_name}} {{name.middle_name}} {{name.last_name}}
+														<p>@{{name.user.username}}</p>
+													</div></a>
+													<div class="profile-description">{{name.description}}</div>
+												</div>
+											</div>
+										</div>
 													{% endfor %}
 
 													{% elif address %}
@@ -641,48 +443,19 @@
 									<div class="jl-content">
 										<div class="content-wrap">
 											<div class="woocommerce-notices-wrapper"></div>
-											<aside class="result-wrap">
-												<p class="woocommerce-result-count">Showing 1–12 of 23 results</p>
-												<form class="woocommerce-ordering" method="get">
-													<select name="orderby" class="orderby" aria-label="Shop order">
-														<option value="menu_order" selected="selected">Default sorting</option>
-														<option value="popularity">Sort by popularity</option>
-														<option value="rating">Sort by average rating</option>
-														<option value="date">Sort by latest</option>
-														<option value="price">Sort by price: low to high</option>
-														<option value="price-desc">Sort by price: high to low</option>
-													</select>
-													<input type="hidden" name="paged" value="1">
-													<input type="hidden" name="import_theme_demo" value="0">
-												</form>
-											</aside>
-
-
-
-											<div class="products-outer">
-
-												<div class="products wc-col-4">
-													{% for name in address %}
-													<div class="jl-wc-col product type-product post-47 status-publish first instock product_cat-clothing product_cat-hoodies has-post-thumbnail shipping-taxable purchasable product-type-simple">
-														<div class="p-feat">
-															<div class="product-thumb">
-																<a href="shop-single.html" class="woocommerce-loop-product-link">
-																	<img width="380" height="380" src="{{name.photo.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy">
-																</a>
-																<div class="product-buttons  cart-tooltips"><a href="?add-to-cart=47" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="47" data-product_sku="" aria-label="Add “alarm clock” to your cart" rel="nofollow">Add to cart</a>
-																</div>
-															</div>
-														</div>
-														<div class="product-loop-content clearfix">
-															<h2 class="woocommerce-loop-product__title h4">
-            <a href="#" class="woocommerce-loop-product-link p-url">{{name.first_name}} {{name.middle_name}} {{name.last_name}}</a>
-        </h2>
-															<div ><span style="width:90%">Username: <strong class="rating">{{name.user.username}}</strong></span>
-															</div> <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>Phone: {{name.mobile1}}</bdi>
-															</span>
-															</span>
-														</div>
-													</div>
+											{% for name in address %}
+											<div class="col-md-4">
+												<br>
+												<br>
+											<div class="profile-card-4 text-center"><img src="{{name.photo.url}}" class="img img-responsive">
+												<div class="profile-content">
+													<a href="{% url 'sresult' name.id %}"> <div class="profile-name">{{name.first_name}} {{name.middle_name}} {{name.last_name}}
+														<p>@{{name.user.username}}</p>
+													</div></a>
+													<div class="profile-description">{{name.description}}</div>
+												</div>
+											</div>
+										</div>
 													{% endfor %}
 
 													{% elif occupation %}
@@ -693,48 +466,19 @@
 									<div class="jl-content">
 										<div class="content-wrap">
 											<div class="woocommerce-notices-wrapper"></div>
-											<aside class="result-wrap">
-												<p class="woocommerce-result-count">Showing 1–12 of 23 results</p>
-												<form class="woocommerce-ordering" method="get">
-													<select name="orderby" class="orderby" aria-label="Shop order">
-														<option value="menu_order" selected="selected">Default sorting</option>
-														<option value="popularity">Sort by popularity</option>
-														<option value="rating">Sort by average rating</option>
-														<option value="date">Sort by latest</option>
-														<option value="price">Sort by price: low to high</option>
-														<option value="price-desc">Sort by price: high to low</option>
-													</select>
-													<input type="hidden" name="paged" value="1">
-													<input type="hidden" name="import_theme_demo" value="0">
-												</form>
-											</aside>
-
-
-
-											<div class="products-outer">
-
-												<div class="products wc-col-4">
-													{% for name in occupation %}
-													<div class="jl-wc-col product type-product post-47 status-publish first instock product_cat-clothing product_cat-hoodies has-post-thumbnail shipping-taxable purchasable product-type-simple">
-														<div class="p-feat">
-															<div class="product-thumb">
-																<a href="shop-single.html" class="woocommerce-loop-product-link">
-																	<img width="380" height="380" src="{{name.photo.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy">
-																</a>
-																<div class="product-buttons  cart-tooltips"><a href="?add-to-cart=47" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="47" data-product_sku="" aria-label="Add “alarm clock” to your cart" rel="nofollow">Add to cart</a>
-																</div>
-															</div>
-														</div>
-														<div class="product-loop-content clearfix">
-															<h2 class="woocommerce-loop-product__title h4">
-            <a href="#" class="woocommerce-loop-product-link p-url">{{name.first_name}} {{name.middle_name}} {{name.last_name}}</a>
-        </h2>
-															<div ><span style="width:90%">Username: <strong class="rating">{{name.user.username}}</strong></span>
-															</div> <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>Phone: {{name.mobile1}}</bdi>
-															</span>
-															</span>
-														</div>
-													</div>
+											{% for name in occupation %}
+											<div class="col-md-4">
+												<br>
+												<br>
+											<div class="profile-card-4 text-center"><img src="{{name.photo.url}}" class="img img-responsive">
+												<div class="profile-content">
+													<a href="{% url 'sresult' name.id %}"> <div class="profile-name">{{name.first_name}} {{name.middle_name}} {{name.last_name}}
+														<p>@{{name.user.username}}</p>
+													</div></a>
+													<div class="profile-description">{{name.description}}</div>
+												</div>
+											</div>
+										</div>
 													{% endfor %}
 
 
@@ -765,12 +509,6 @@
 
 												</div>
 											</div>
-											<nav class="woocommerce-pagination">
-												<div class="pagination-wrap pagination-number clearfix"> <span aria-current="page" class="page-numbers current">1</span>
-													<a class="page-numbers" href="#">2</a>
-													<a class="next page-numbers" href="#"><i class="jli-right-chevron"></i></a>
-												</div>
-											</nav>
 										</div>
 									</div>
 								</div>
@@ -801,6 +539,7 @@
 					</div>
 				</div>
 			</div>
+
 			<!-- end content -->
 			<!-- Start footer -->
 			<footer id="footer-container" class="jl_footer_act enable_footer_columns_dark">
