@@ -12,7 +12,8 @@ from login.models import ActiveInvite
 @login_required
 def Blog(request):
     blogs = Post.objects.all()
-    return render(request, 'blog/blog_page.html', {'blogs': blogs})
+    menu = Post.objects.all().order_by('id')[:3][::-1]
+    return render(request, 'blog/blog_page.html', {'blogs': blogs, 'menu': menu})
 
 @login_required
 def Posts(request):
@@ -21,6 +22,7 @@ def Posts(request):
 @login_required
 def Addpost(request):
     form = forms.Blog
+    menu = Post.objects.all().order_by('id')[:3][::-1]
     if request.method == 'POST':
         title = request.POST.get('title')
         thumbnail = request.FILES.getlist('thumbnail')
@@ -41,11 +43,12 @@ def Addpost(request):
         post1.save()
         return redirect('blog')
 
-    return render(request, 'blog/blog_addpost.html', {'form': form})
+    return render(request, 'blog/blog_addpost.html', {'form': form, 'menu': menu})
 
 @login_required
 def blogview(request, title):
     id =0
+    menu = Post.objects.all().order_by('id')[:3][::-1]
     post = Post.objects.filter(title=title)
     post2 = Post.objects.get(title=title)
     id = post2.id
@@ -68,4 +71,4 @@ def blogview(request, title):
         c.comment = comment
         c.save()
 
-    return render(request,'blog/blog_post.html', {'post': post, 'comments': cmnt, 'ai': activeinvite2, 'side': side, 'count': count, 'previous': previous, 'next': next})
+    return render(request,'blog/blog_post.html', {'post': post, 'comments': cmnt, 'ai': activeinvite2, 'side': side, 'count': count, 'previous': previous, 'next': next, 'menu': menu})

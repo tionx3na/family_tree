@@ -16,10 +16,10 @@ def home(requests):
     adminpost = AdminPost.objects.all().order_by('-id')[:1]
     users = ActiveInvite.objects.all().order_by('-id')[:4][::-1]
     post = Post.objects.all().order_by('id')[:6][::-1]
+    menu = Post.objects.all().order_by('id')[:3][::-1]
     events = FamilyEvent.objects.all().order_by('id')[:8][::-1]
     gallery = Add.objects.all().order_by('id')[:3][::-1]
-    print(gallery)
-    context = {'adminpost': adminpost, 'users': users, 'post': post, 'events': events, 'gallery': gallery}
+    context = {'adminpost': adminpost, 'users': users, 'post': post, 'events': events, 'gallery': gallery, 'menu': menu}
     return render(requests, 'home/home.html', context)
 
 @login_required

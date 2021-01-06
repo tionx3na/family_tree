@@ -53,51 +53,27 @@
 								</div>
 							</div>
 							<div class="bt_post_widget">
+
+								{% for menu in menu %}
 								<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
 									<div class="jl_m_right_w">
 										<div class="jl_m_right_img jl_radus_e">
-											<a href="#">
-												<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy" />
+											<a href="{% url 'blogview' menu.title %}">
+												<img width="120" height="120" src="{{menu.thumbnail.url}}" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy" />
 											</a>
 										</div>
 										<div class="jl_m_right_content">
-											<h2 class="entry-title"><a href="#" tabindex="-1">Best inspire dark photo in the winter season</a></h2>
+											<h2 class="entry-title"><a href="{% url 'blogview' menu.title %}" tabindex="-1">{{menu.title}}</a></h2>
 											<span class="jl_post_meta">
-                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 23, 2016</span>
+                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="{% url 'blogview' menu.title %}" title="Posts by Spraya" rel="author">{{menu.author}}</a></span><span class="post-date"><i class="jli-pen"></i>{{menu.timestamp}}</span>
 											</span>
 										</div>
 									</div>
 								</div>
-								<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-									<div class="jl_m_right_w">
-										<div class="jl_m_right_img jl_radus_e">
-											<a href="#">
-												<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy" />
-											</a>
-										</div>
-										<div class="jl_m_right_content">
-											<h2 class="entry-title"><a href="#" tabindex="-1">Your job will be perfect if you concentrate</a></h2>
-											<span class="jl_post_meta">
-                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 23, 2016</span>
-											</span>
-										</div>
-									</div>
-								</div>
-								<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-									<div class="jl_m_right_w">
-										<div class="jl_m_right_img jl_radus_e">
-											<a href="#">
-												<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy" />
-											</a>
-										</div>
-										<div class="jl_m_right_content">
-											<h2 class="entry-title"><a href="#" tabindex="-1">Enjoy the best time with a special person</a></h2>
-											<span class="jl_post_meta">
-                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 23, 2016</span>
-											</span>
-										</div>
-									</div>
-								</div>
+								{% endfor %}
+
+
+
 							</div>
 						</div>
 					</div>

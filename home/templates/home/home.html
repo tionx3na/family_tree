@@ -160,51 +160,27 @@
 								</div>
 							</div>
 							<div class="bt_post_widget">
+
+								{% for menu in menu %}
 								<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
 									<div class="jl_m_right_w">
 										<div class="jl_m_right_img jl_radus_e">
-											<a href="#">
-												<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy" />
+											<a href="{% url 'blogview' menu.title %}">
+												<img width="120" height="120" src="{{menu.thumbnail.url}}" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy" />
 											</a>
 										</div>
 										<div class="jl_m_right_content">
-											<h2 class="entry-title"><a href="#" tabindex="-1">Best inspire dark photo in the winter season</a></h2>
+											<h2 class="entry-title"><a href="{% url 'blogview' menu.title %}" tabindex="-1">{{menu.title}}</a></h2>
 											<span class="jl_post_meta">
-                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 23, 2016</span>
+                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="{% url 'blogview' menu.title %}" title="Posts by Spraya" rel="author">{{menu.author}}</a></span><span class="post-date"><i class="jli-pen"></i>{{menu.timestamp}}</span>
 											</span>
 										</div>
 									</div>
 								</div>
-								<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-									<div class="jl_m_right_w">
-										<div class="jl_m_right_img jl_radus_e">
-											<a href="#">
-												<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy" />
-											</a>
-										</div>
-										<div class="jl_m_right_content">
-											<h2 class="entry-title"><a href="#" tabindex="-1">Your job will be perfect if you concentrate</a></h2>
-											<span class="jl_post_meta">
-                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 23, 2016</span>
-											</span>
-										</div>
-									</div>
-								</div>
-								<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-									<div class="jl_m_right_w">
-										<div class="jl_m_right_img jl_radus_e">
-											<a href="#">
-												<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy" />
-											</a>
-										</div>
-										<div class="jl_m_right_content">
-											<h2 class="entry-title"><a href="#" tabindex="-1">Enjoy the best time with a special person</a></h2>
-											<span class="jl_post_meta">
-                                       <span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 23, 2016</span>
-											</span>
-										</div>
-									</div>
-								</div>
+								{% endfor %}
+
+
+
 							</div>
 						</div>
 					</div>
@@ -241,13 +217,13 @@
 										<div class="jl_m_center blog-style-one blog-small-grid">
 											<div class="jl_m_center_w jl_radus_e">
 												<div class="jl_f_img_bg" style="background-image: url('{{adminpost.thumbnail.url}}');"></div>
-												<a href="homehome/{{adminpost.title}}+title" class="jl_f_img_link"></a> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
-												<div class="text-box"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #eba845;" href="blogblogview/{{adminpost.title}}+title">{{adminpost.tag}}</a></span>
+												<a href="{% url 'homepost' adminpost.title %}" class="jl_f_img_link"></a> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
+												<div class="text-box"> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #eba845;" href="{% url 'homepost' adminpost.title %}">{{adminpost.tag}}</a></span>
 													<h3>
-                                                                                 <a href="blogblogview/{{adminpost.title}}+title">{{adminpost.title}}</a>
+                                                                                 <a href="{% url 'homepost' adminpost.title %}">{{adminpost.title}}</a>
                                                                               </h3>
 													<span class="jl_post_meta">
-                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="blogblogview/{{adminpost.title}}+title" title="Posts by Spraya" rel="author">{{adminpost.author}}</a></span>
+                                                                              <span class="jl_author_img_w"><i class="jli-user"></i><a href="{% url 'homepost' adminpost.title %}" title="Posts by Spraya" rel="author">{{adminpost.author}}</a></span>
 													<span class="post-date"><i class="jli-pen"></i>{{adminpost.timestamp}}</span>
 													<span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span>
 													</span>
@@ -310,7 +286,7 @@
 												<div class="p-wraper post-2959">
 													<div class="jl_grid_w">
 														<div class="jl_img_box jl_radus_e">
-															<a href="blogblogview/{{post.title}}+title"> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
+															<a href="{% url 'blogview' post.title %}"> <span class="jl_post_type_icon"><i class="jli-gallery"></i></span>
 																<img width="500" height="350" src="{{post.thumbnail.url}}" class="attachment-sprasa_slider_grid_small size-sprasa_slider_grid_small wp-post-image" alt="" loading="lazy">
 															</a> <span class="jl_f_cat"><a class="post-category-color-text" style="background: #62ce5c;" href="#">{{post.tag}}</a></span>
 														</div>
