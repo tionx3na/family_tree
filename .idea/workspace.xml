@@ -20,20 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5facc6ff-f495-4757-9006-57fc3dcc08c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/blog_addpost.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/blog_addpost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/blog_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/blog_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/blog_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/blog_post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/templates/gallery/gallery_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/templates/gallery/gallery_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/templates/gallery/gallery_full.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/templates/gallery/gallery_full.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/templates/gallery/gallery_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/templates/gallery/gallery_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myprofile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
