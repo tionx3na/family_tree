@@ -131,24 +131,23 @@
 											</div>
 											<div class="single_post_entry_content single_bellow_left_align jl_top_single_title jl_top_title_feature">
 												<h1 class="single_post_title_main">{{post.overview|safe}}</h1>
-												<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">{{post.author}}</a></span><span class="post-date"><i class="jli-pen"></i>{{post.timestamp}}</span><span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span><span class="meta-comment"><i class="jli-comments"></i><a href="#">{{post.comment_count}} comments</a></span></span>
+												<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">{{post.author}}</a></span><span class="post-date"><i class="jli-pen"></i>{{post.timestamp}}</span><span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span><span class="meta-comment"><i class="jli-comments"></i><a href="#">{{count}} comments</a></span></span>
 											</div>
 										</div>
 										<div class="post_content_w">
 											<div class="post_sw">
 												<div class="post_s">
 													<div class="jl_single_share_wrapper jl_clear_at">
-														p <br>
-														l <br>
-														a <br>
-														c <br>
-														e <br>
-														h <br>
-														o <br>
-														l <br>
-														d <br>
-														e <br>
-														r <br>
+														<ul class="single_post_share_icon_post">
+															<li class="single_post_share_facebook"><a href="#" target="_blank"><i class="jli-facebook"></i></a>
+															</li>
+															<li class="single_post_share_twitter"><a href="#" target="_blank"><i class="jli-twitter"></i></a>
+															</li>
+															<li class="single_post_share_pinterest"><a href="#" target="_blank"><i class="jli-pinterest"></i></a>
+															</li>
+															<li class="single_post_share_linkedin"><a href="#" target="_blank"><i class="jli-linkedin"></i></a>
+															</li>
+														</ul>
 													</div>
 												</div>
 											</div>
@@ -178,32 +177,34 @@
 										</div>
 										{% endfor %}
 
-
-
-
-
-
-
-
 										<div class="postnav_w">
+
+
+											{% for previous in previous %}
 											<div class="postnav_left">
 												<div class="single_post_arrow_content">
-													<a href="#" id="prepost"> <span class="jl_cpost_nav">
+													<a href="{% url 'blogview' previous.title %}" id="prepost"> <span class="jl_cpost_nav">
                                         <span class="jl_post_nav_link"><i class="jli-left-arrow"></i>Previous post</span>
-														<span class="jl_cpost_title">This guitar sound is so good and i need it more</span>
+														<span class="jl_cpost_title">{{previous.title}}</span>
 														</span>
 													</a>
 												</div>
 											</div>
+											{% endfor %}
+
+											{% for next in next %}
 											<div class="postnav_right">
 												<div class="single_post_arrow_content">
-													<a href="#" id="nextpost"> <span class="jl_cpost_nav">
+													<a href="{% url 'blogview' next.title %}" id="nextpost"> <span class="jl_cpost_nav">
                                         <span class="jl_post_nav_link">Next post<i class="jli-right-arrow"></i></span>
-														<span class="jl_cpost_title">This place really good place for reading</span>
+														<span class="jl_cpost_title">{{next.title}}</span>
 														</span>
 													</a>
 												</div>
 											</div>
+											{% endfor %}
+
+
 										</div>
 										<br>
 										<hr>
@@ -213,7 +214,7 @@
 											<div class="author-info jl_info_auth">
 												<div class="author-avatar">
 													{% for ai in ai %}
-													<img src="{{comments.user}}" width="165" height="165" alt="Spraya" class="avatar avatar-165 wp-user-avatar wp-user-avatar-165 alignnone photo">
+													<img src="{{comments.user.photo.url}}" width="165" height="165" alt="Spraya" class="avatar avatar-165 wp-user-avatar wp-user-avatar-165 alignnone photo">
 													{% endfor %}
 												</div>
 												<div class="author-description">
@@ -263,11 +264,13 @@
 								<div class="brack_space"></div>
 							</div>
 						</div>
+
+
 						<div class="col-md-4" id="sidebar">
 							<div class="jl_sidebar_w">
 								<div id="sprasa_widget_social_counter_c-2" class="widget jl-widget-social-counter">
 									<div class="widget-title">
-										<h2 class="jl_title_c">Stay Connected</h2>
+										<h2 class="jl_title_c">Advertisement</h2>
 									</div>
 									<div class="jl_social_counter social_counter_wraper jl_count_style_2 social_counter_item>">
 										<div class="jlsocial-element jl-facebook jl_radus_e">
@@ -296,66 +299,36 @@
 										</div>
 									</div>
 								</div>
+
 								<div id="sprasa_recent_post_text_widget-9" class="widget post_list_widget">
 									<div class="widget_jl_wrapper">
 										<div class="ettitle">
 											<div class="widget-title">
-												<h2 class="jl_title_c">Art &amp; Fashion</h2>
+												<h2 class="jl_title_c">Recent Blog Posts</h2>
 											</div>
 										</div>
 										<div class="bt_post_widget">
+
+
+											{% for side in side %}
 											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
 												<div class="jl_m_right_w">
 													<div class="jl_m_right_img jl_radus_e">
-														<a href="#">
-															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
+														<a href="{% url 'blogview' side.title %}">
+															<img width="120" height="120" src="{{side.thumbnail.url}}" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
 														</a>
 													</div>
 													<div class="jl_m_right_content">
-														<h2 class="entry-title"> <a href="#" tabindex="-1">This place really good place for reading</a></h2>
-														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
+														<h2 class="entry-title"> <a href="{% url 'blogview' side.title %}" tabindex="-1">{{side.title}}</a></h2>
+														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="{% url 'blogview' side.title %}" title="Posts by Spraya" rel="author">{{side.author}}</a></span><span class="post-date"><i class="jli-pen"></i>{{side.timestamp}}</span></span>
 													</div>
 												</div>
 											</div>
-											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-												<div class="jl_m_right_w">
-													<div class="jl_m_right_img jl_radus_e">
-														<a href="#">
-															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-														</a>
-													</div>
-													<div class="jl_m_right_content">
-														<h2 class="entry-title"> <a href="#" tabindex="-1">Having fun with DJ and the best music drop</a></h2>
-														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
-													</div>
-												</div>
-											</div>
-											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-												<div class="jl_m_right_w">
-													<div class="jl_m_right_img jl_radus_e">
-														<a href="#">
-															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-														</a>
-													</div>
-													<div class="jl_m_right_content">
-														<h2 class="entry-title"> <a href="#" tabindex="-1">This guitar sound is so good and i need it more</a></h2>
-														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
-													</div>
-												</div>
-											</div>
-											<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-												<div class="jl_m_right_w">
-													<div class="jl_m_right_img jl_radus_e">
-														<a href="#">
-															<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-														</a>
-													</div>
-													<div class="jl_m_right_content">
-														<h2 class="entry-title"> <a href="#" tabindex="-1">Technology can make your live easy and fast</a></h2>
-														<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
-													</div>
-												</div>
-											</div>
+											{% endfor %}
+
+
+
+
 										</div>
 									</div>
 								</div>

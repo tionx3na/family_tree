@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from tinymce.models import HTMLField
+from login.models import ActiveInvite
 
 User = get_user_model()
 
@@ -8,12 +9,12 @@ User = get_user_model()
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    overview = HTMLField('overview', default=0)
+    overview = HTMLField('overview', default=' ')
     content = HTMLField('content', default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     comment_count = models.IntegerField(default=0)
     author = models.CharField(max_length=50, null=True)
-    thumbnail = models.ImageField(blank=False, default=0)
+    thumbnail = models.ImageField(blank=False, default='thumbnail.jpg')
     tag = models.CharField(max_length=20, null=True)
 
     class Meta:
@@ -37,7 +38,7 @@ class Post(models.Model):
 
 class Comments(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(ActiveInvite, on_delete=models.CASCADE)
     comment = models.CharField(max_length=500, null=True)
 
     class Meta:

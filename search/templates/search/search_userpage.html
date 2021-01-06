@@ -4,7 +4,9 @@
 
 
 <div class="auth">
-<h1 align="center">My Profile</h1>
+	  {% for profile in user %}
+<h1 align="center"> {{profile.first_name}}'s Profile</h1>
+	{% endfor %}
     <hr>
     <p align="center">Account Details</p>
     <hr>

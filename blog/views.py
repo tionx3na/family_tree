@@ -45,17 +45,27 @@ def Addpost(request):
 
 @login_required
 def blogview(request, title):
+    id =0
     post = Post.objects.filter(title=title)
+    post2 = Post.objects.get(title=title)
+    id = post2.id
+    id1 = id-1
+    id2 = id + 1
+    previous = Post.objects.filter(id=id1)
+    next = Post.objects.filter(id=id2)
+    side = Post.objects.all().order_by('id')[:4][::-1]
     cmnt = Comments.objects.filter(post__title=title)
-    activeinvite = ActiveInvite.objects.filter(user=request.user)
+    count = Comments.objects.filter(post__title=title).count()
+    activeinvite = ActiveInvite.objects.get(user=request.user)
+    activeinvite2 = ActiveInvite.objects.filter(user=request.user)
     if request.method == 'POST':
         user = request.user
         comment = request.POST.get('comment')
         l = Post.objects.get(title=title)
         c = Comments()
-        c.user = user
+        c.user = activeinvite
         c.post = l
         c.comment = comment
         c.save()
 
-    return render(request,'blog/blog_post.html', {'post': post, 'comments': cmnt, 'ai': activeinvite})
+    return render(request,'blog/blog_post.html', {'post': post, 'comments': cmnt, 'ai': activeinvite2, 'side': side, 'count': count, 'previous': previous, 'next': next})
