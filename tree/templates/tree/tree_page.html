@@ -67,8 +67,19 @@ window.onload = function () {
     });
 
     {% for tree in tree %}
-    chart.add({ id: {{tree.id}},  name: "{{tree.name}}", title: "Sales Manager" });
-    chart.draw(OrgChart.action.init);
+        {% if tree.connected_of_id %}
+            {% if tree.child_to_id %}
+                chart.add({ id: {{tree.id}}, pid: {{tree.connected_to_id}} ,  tags: ["blue"] , ppid: {{tree.child_of_id}}  ,  name: "{{tree.name}}", title: "Sales Manager" });
+            {% else %}
+                chart.add({ id: {{tree.id}}, ppid: {{tree.connected_of_id}}  , tags: ["partner"] ,  name: "{{tree.name}}", title: "Sales Manager" });
+            {% endif %}
+        {% elif tree.child_of_id %}
+            chart.add({ id: {{tree.id}},  pid: {{tree.child_of_id}} , tags: ["blue"] ,  name: "{{tree.name}}", title: "Sales Manager" });
+        {% else %}
+            chart.add({ id: {{tree.id}} , tags: ["blue"] ,  name: "{{tree.name}}", title: "Sales Manager" });
+        {% endif %}
+
+        chart.draw(OrgChart.action.init);
 
     {% endfor %}
 };
