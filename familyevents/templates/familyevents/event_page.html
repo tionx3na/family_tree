@@ -1,4 +1,4 @@
-
+{% extends 'blog/blog_main.html' %}
 {% load static %}
 {% block content1 %}
 
@@ -26,10 +26,15 @@
 <div class="container">
   <h1 class="title">Family Events</h1>
   <hr>
-            <h3 align="center"> <a href="{% url 'addevent' %}" class="jl-load-link"><span> Add a New Event </span></a> </h3>
+  <br>
+
+                                         <div class="jl_lmore_wrap">
+											<div class="jl_lmore_c"> <a href="{% url 'addevent' %}" class="jl-load-link"><span>Add Event</span></a>
+												<span class="jl-load-animation"><span></span></span>
+											</div>
+										</div>
             <span class="jl-load-animation"><span></span></span>
             <hr>
-            <br>
   <div class="timeline">
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -46,8 +51,8 @@
 		  {% for event in event %}
         <div class="swiper-slide" style="background-image: url({{event.pic.url}})" data-year="{{event.date}}">
           <div class="swiper-slide-content"><span class="timeline-year">By @{{event.author}}</span>
-            <h4 class="timeline-title">{{event.title}}</h4>
-            <p class="timeline-text">{{event.content}}</p>
+            <div class="timeline-title">{{event.title}}</div>
+            <div class="timeline-text">{{event.content}}</div>
           </div>
         </div>
 		  {% endfor %}
@@ -61,16 +66,12 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
+  <br>
+  <br>
 </div>
-<br>
-<br>
-<h3 align="center"> <a href="{% url 'home' %}" class="jl-load-link"><span>Go to Home!</span></a> </h3>
-<br>
-<br>
-<br>
-<br>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js'></script><script src="{% static 'js/events.js' %}"></script>
+
 
 </body>
 </html>

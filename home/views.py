@@ -45,7 +45,7 @@ def newuser(requests):
         password = requests.POST.get('password')
         user = User.objects.get(username__exact=requests.user)
         user.username = username
-        user.email = email
+        user.email = emailxt5lispo8xs
         user.set_password(password)
         user.save()
         activeinvite = ActiveInvite(user=requests.user)

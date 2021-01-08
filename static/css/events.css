@@ -1,24 +1,4 @@
 
-.container {
-  height: 100%;
-}
-
-
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  flex-direction: column;
-}
-
-.title {
-  font-size: 38px;
-  color: #616161;
-  font-style: italic;
-  font-weight: 800;
-}
 
 .timeline {
   width: 100%;
