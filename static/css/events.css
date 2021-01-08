@@ -1,13 +1,9 @@
-html,
-body,
+
 .container {
   height: 100%;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-}
+
 
 .container {
   display: flex;

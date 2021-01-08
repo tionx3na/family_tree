@@ -3,5 +3,4 @@ from . import views
 
 urlpatterns = [
     path('', views.tree, name="tree"),  # Pointer to landing page function in views.py
-    path('temp', views.temp, name="temp"),
 ]

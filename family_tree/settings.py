@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'tree.apps.FamilytreeConfig',
     'search.apps.SearchConfig',
+    'advertisement.apps.AdvertisementConfig',
 ]
 
 SITE_ID = 1

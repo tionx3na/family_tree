@@ -9,12 +9,7 @@ from django.core import serializers
 
 @login_required
 def tree(requests):
-    tree = Tree.objects.all()
-    print(tree)
+    tree = TreeScript.objects.all()
     return render(requests, 'tree/tree_page.html', {'tree': tree})
 
-@login_required
-def temp(requests):
-    tree = Tree.objects.all()
-    print(tree)
-    return render(requests, 'tree/home.html', {'tree': tree})
+

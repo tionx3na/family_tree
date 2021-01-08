@@ -5,6 +5,7 @@ from login.models import ActiveInvite
 from blog.models import Post
 from gallery.models import Add
 from familyevents.models import FamilyEvent
+from advertisement.models import Advertisement, Adinpage, Thought
 
 # Create your views here.
 
@@ -19,7 +20,10 @@ def home(requests):
     menu = Post.objects.all().order_by('id')[:3][::-1]
     events = FamilyEvent.objects.all().order_by('id')[:8][::-1]
     gallery = Add.objects.all().order_by('id')[:3][::-1]
-    context = {'adminpost': adminpost, 'users': users, 'post': post, 'events': events, 'gallery': gallery, 'menu': menu}
+    ad = Advertisement.objects.all()
+    adin = Adinpage.objects.all().order_by('id')[:3][::-1]
+    thought = Thought.objects.all().order_by('id')[:1][::-1]
+    context = {'adminpost': adminpost, 'users': users, 'post': post, 'events': events, 'gallery': gallery, 'menu': menu, 'ad': ad, 'adin': adin, 'thought': thought}
     return render(requests, 'home/home.html', context)
 
 @login_required

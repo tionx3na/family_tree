@@ -334,45 +334,26 @@
 											<div class="jl_ar_top">
 												<div class="jl-w-slider jl_full_feature_w">
 													<div class="jl-eb-slider jelly_loading_pro" data-arrows="true" data-play="true" data-effect="false" data-speed="500" data-autospeed="7000" data-loop="true" data-dots="true" data-swipe="true" data-items="1" data-xs-items="1" data-sm-items="1" data-md-items="1" data-lg-items="1" data-xl-items="1">
+
+
+
+														{% for ad in ad %}
 														<div class="item-slide jl_radus_e">
 															<div class="slide-inner">
 																<div class="jl_full_feature">
-																	<div class="jl_f_img_bg" style="background-image: url('img/1920x800.png')"></div>
-																	<a href="#" class="jl_f_img_link"></a>
-																	<div class="jl_f_postbox"> <span class="jl_f_cat"><a class="post-category-color-text" style="background:#4dcf8f" href="#">Active</a></span>
+																	<div class="jl_f_img_bg" style="background-image: url('{{ad.photo.url}}')"></div>
+																	<a href="{{ad.link}}" class="jl_f_img_link"></a>
+																	<div class="jl_f_postbox"> <span class="jl_f_cat"><a class="post-category-color-text" style="background:#4dcf8f" href="#">Advertisement</a></span>
 																		<h3 class="jl_f_title">
-                            <a href="#" tabindex="-1">Outdoor photo shooting with sexy and beautiful</a>
-                        </h3>  <span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2019</span><span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span></span>
+                            <a href="{{ad.link}}" tabindex="-1">{{ad.title}}</a>
+                        </h3></span>
 																	</div>
 																</div>
 															</div>
 														</div>
-														<div class="item-slide jl_radus_e">
-															<div class="slide-inner">
-																<div class="jl_full_feature">
-																	<div class="jl_f_img_bg" style="background-image: url('img/1920x800.png')"></div>
-																	<a href="#" class="jl_f_img_link"></a>
-																	<div class="jl_f_postbox"> <span class="jl_f_cat"><a class="post-category-color-text" style="background:#d66300" href="#">Science</a></span>
-																		<h3 class="jl_f_title">
-                            <a href="#" tabindex="-1">Hiding face is great way make you unique style</a>
-                        </h3>  <span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2019</span><span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span></span>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="item-slide jl_radus_e">
-															<div class="slide-inner">
-																<div class="jl_full_feature">
-																	<div class="jl_f_img_bg" style="background-image: url('img/1920x800.png')"></div>
-																	<a href="#" class="jl_f_img_link"></a>
-																	<div class="jl_f_postbox"> <span class="jl_f_cat"><a class="post-category-color-text" style="background:#d66300" href="#">Science</a></span>
-																		<h3 class="jl_f_title">
-                            <a href="#" tabindex="-1">Music will be more attractive if have guitar sound</a>
-                        </h3>  <span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2019</span><span class="post-read-time"><i class="jli-watch-2"></i>2 Mins read</span></span>
-																	</div>
-																</div>
-															</div>
-														</div>
+														{% endfor %}
+
+
 													</div>
 												</div>
 											</div>
@@ -440,33 +421,17 @@
 								<div class="jl_sidebar_w">
 									<div id="sprasa_widget_social_counter_c-2" class="widget jl-widget-social-counter">
 										<div class="widget-title">
-											<h2 class="jl_title_c">Stay Connected</h2>
+											<h2 class="jl_title_c">Thought Of The Day</h2>
 										</div>
 										<div class="jl_social_counter social_counter_wraper jl_count_style_2 social_counter_item>">
-											<div class="jlsocial-element jl-facebook jl_radus_e">
-												<a target="_blank" href="https://facebook.com/envato" class="facebook" title="facebook"></a> <span class="jlsocial-element-left">
-                            <i class="jli-facebook" aria-hidden="true"></i>
-                            <span class="num-count">228.8k</span>
-												</span> <span class="jlsocial-element-right">fans</span>
-											</div>
-											<div class="jlsocial-element jl-youtube jl_radus_e">
-												<a target="_blank" href="https://www.youtube.com/user/envato " title="Youtube"></a> <span class="jlsocial-element-left">
-                            <i class="jli-youtube" aria-hidden="true"></i>
-                            <span class="num-count">65.5k</span>
-												</span> <span class="jlsocial-element-right">subscribers</span>
-											</div>
-											<div class="jlsocial-element jl-vimeo jl_radus_e">
-												<a target="_blank" href="https://vimeo.com/beeple" title="vimeo"></a> <span class="jlsocial-element-left">
-                            <i class="jli-vimeo" aria-hidden="true"></i>
-                            <span class="num-count">240</span>
-												</span> <span class="jlsocial-element-right">subscribers</span>
-											</div>
-											<div class="jlsocial-element jl-pinterest jl_radus_e">
-												<a target="_blank" href="https://pinterest.com/envato" class="pinterest" title="pinterest"></a> <span class="jlsocial-element-left">
-                        <i class="jli-pinterest" aria-hidden="true"></i>
-                        <span class="num-count">9.87k</span>
-												</span> <span class="jlsocial-element-right">followers</span>
-											</div>
+
+											{% for thought in thought %}
+
+											<h2 align="center">" {{thought.thought}} "</h2>
+
+											{% endfor %}
+
+
 										</div>
 									</div>
 									<div id="sprasa_recent_post_text_widget-9" class="widget post_list_widget">
@@ -477,58 +442,26 @@
 												</div>
 											</div>
 											<div class="bt_post_widget">
+
+
+												{% for adin in adin %}
 												<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
 													<div class="jl_m_right_w">
 														<div class="jl_m_right_img jl_radus_e">
-															<a href="#">
-																<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
+															<a href="{{adin.link}}">
+																<img width="120" height="120" src="{{adin.photo.url}}" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
 															</a>
 														</div>
 														<div class="jl_m_right_content">
-															<h2 class="entry-title"> <a href="#" tabindex="-1">This place really good place for reading</a></h2>
-															<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
+															<h2 class="entry-title"> <a href="{{adin.link}}" tabindex="-1">{{adin.title}}</a></h2>
+															</span>
 														</div>
 													</div>
 												</div>
-												<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-													<div class="jl_m_right_w">
-														<div class="jl_m_right_img jl_radus_e">
-															<a href="#">
-																<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-															</a>
-														</div>
-														<div class="jl_m_right_content">
-															<h2 class="entry-title"> <a href="#" tabindex="-1">Having fun with DJ and the best music drop</a></h2>
-															<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
-														</div>
-													</div>
-												</div>
-												<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-													<div class="jl_m_right_w">
-														<div class="jl_m_right_img jl_radus_e">
-															<a href="#">
-																<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-															</a>
-														</div>
-														<div class="jl_m_right_content">
-															<h2 class="entry-title"> <a href="#" tabindex="-1">This guitar sound is so good and i need it more</a></h2>
-															<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
-														</div>
-													</div>
-												</div>
-												<div class="jl_m_right jl_sm_list jl_ml jl_clear_at">
-													<div class="jl_m_right_w">
-														<div class="jl_m_right_img jl_radus_e">
-															<a href="#">
-																<img width="120" height="120" src="img/120x120.png" class="attachment-sprasa_small_feature size-sprasa_small_feature wp-post-image" alt="" loading="lazy">
-															</a>
-														</div>
-														<div class="jl_m_right_content">
-															<h2 class="entry-title"> <a href="#" tabindex="-1">Technology can make your live easy and fast</a></h2>
-															<span class="jl_post_meta"><span class="jl_author_img_w"><i class="jli-user"></i><a href="#" title="Posts by Spraya" rel="author">Spraya</a></span><span class="post-date"><i class="jli-pen"></i>July 24, 2016</span></span>
-														</div>
-													</div>
-												</div>
+												{% endfor %}
+
+
+
 											</div>
 										</div>
 									</div>

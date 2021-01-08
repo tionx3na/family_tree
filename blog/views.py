@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from . import forms
 from .models import Post, Comments
 from login.models import ActiveInvite
+from advertisement.models import Advertisement, Adinpage, Thought
 
 
 
@@ -49,6 +50,8 @@ def Addpost(request):
 def blogview(request, title):
     id =0
     menu = Post.objects.all().order_by('id')[:3][::-1]
+    adin = Adinpage.objects.all().order_by('id')[:3][::-1]
+    thought = Thought.objects.all().order_by('id')[:1][::-1]
     post = Post.objects.filter(title=title)
     post2 = Post.objects.get(title=title)
     id = post2.id
@@ -71,4 +74,4 @@ def blogview(request, title):
         c.comment = comment
         c.save()
 
-    return render(request,'blog/blog_post.html', {'post': post, 'comments': cmnt, 'ai': activeinvite2, 'side': side, 'count': count, 'previous': previous, 'next': next, 'menu': menu})
+    return render(request,'blog/blog_post.html', {'post': post, 'comments': cmnt, 'ai': activeinvite2, 'side': side, 'count': count, 'previous': previous, 'next': next, 'menu': menu, 'adin': adin, 'thought': thought})

@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 
 class Tree(models.Model):
-    connected_to = models.ForeignKey('self', on_delete=models.CASCADE, related_name='%(class)s_connected_to', null=True, blank=True)
+    Family = models.ForeignKey('self', on_delete=models.CASCADE, related_name='%(class)s_connected_to', null=True, blank=True)
     child_of = models.ForeignKey('self', on_delete=models.CASCADE, related_name='child',null=True, blank=True)
     tag =  models.CharField(max_length=20, null=True, blank=True)
     name = models.CharField(max_length=50, null=True)
@@ -29,5 +29,18 @@ class Tree(models.Model):
         except:
             url = ''
         return url
+
+
+class TreeScript(models.Model):
+    script = models.TextField(max_length=1000000, null=True, blank=True)
+    logo_url = models.CharField(max_length=200, null=True, blank=True)
+
+
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'Family Tree'
+        verbose_name_plural = 'Family Tree Informations'
+
 
 

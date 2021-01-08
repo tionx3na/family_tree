@@ -6,6 +6,7 @@ from login.models import ActiveInvite
 from blog.models import Post
 from django.contrib.auth.decorators import login_required
 import datetime
+from advertisement.models import Advertisement, Adinpage, Thought
 
 # Create your views here.
 
@@ -39,6 +40,8 @@ def profileedit(request):
     activeinvite = ActiveInvite.objects.get(user=request.user)
     posts = Post.objects.all().order_by('id')[:4][::-1]
     menu = Post.objects.all().order_by('id')[:3][::-1]
+    adin = Adinpage.objects.all().order_by('id')[:3][::-1]
+    thought = Thought.objects.all().order_by('id')[:1][::-1]
     form = forms.MyProfile(initial={'first_name': activeinvite.first_name, 'middle_name': activeinvite.middle_name, 'last_name': activeinvite.last_name, 'description': activeinvite.description, 'nick_name': activeinvite.nick_name, 'mobile1': activeinvite.mobile1, 'mobile2': activeinvite.mobile2, 'whatsapp': activeinvite.whatsapp, 'email': activeinvite.email, 'father': activeinvite.father, 'mother': activeinvite.mother, 'address': activeinvite.address, 'temp_address': activeinvite.temp_address, 'parish': activeinvite.parish, 'dob': activeinvite.dob, 'blood': activeinvite.blood, 'occupation': activeinvite.occupation, 'company': activeinvite.company, 'occupation_place': activeinvite.occupation_place, 'spouse_name': activeinvite.spouse_name, 'spouse_father': activeinvite.spouse_father, 'spouse_mother': activeinvite.spouse_mother, 'wedding_date': activeinvite.wedding_date})
     now = datetime.datetime.now()
     now_full = now.strftime("%Y-%m-%d")
@@ -120,7 +123,7 @@ def profileedit(request):
             return redirect('myprofile')
     profile = ActiveInvite.objects.filter(user=request.user)
 
-    return render(request,'myprofile/myprofile_edit.html', {'form': form, 'profile': profile, 'posts': posts, 'menu': menu})
+    return render(request,'myprofile/myprofile_edit.html', {'form': form, 'profile': profile, 'posts': posts, 'menu': menu, 'adin': adin, 'thought': thought})
 
 
 
