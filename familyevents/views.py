@@ -2,17 +2,20 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from . import forms
 from .models import FamilyEvent
+from blog.models import Post
 
 # Create your views here.
 
 @login_required
 def events(request):
     event = FamilyEvent.objects.all()
-    return render(request, 'familyevents/event_page.html', {'event': event})
+    menu = Post.objects.all().order_by('id')[:3][::-1]
+    return render(request, 'familyevents/event_page.html', {'event': event, 'menu': menu})
 
 @login_required
 def addevent(request):
     form = forms.Event()
+    menu = Post.objects.all().order_by('id')[:3][::-1]
     if request.method == 'POST':
         pro_pic = request.FILES.getlist('thumbnail')
         title = request.POST.get('title')
@@ -76,4 +79,4 @@ def addevent(request):
         return redirect('events')
 
 
-    return render(request, 'familyevents/addevent_page.html', {'form': form})
+    return render(request, 'familyevents/addevent_page.html', {'form': form, 'menu': menu})

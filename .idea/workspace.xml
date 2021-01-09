@@ -21,9 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5facc6ff-f495-4757-9006-57fc3dcc08c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/blog_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/blog_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/familyevents/templates/familyevents/addevent_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/familyevents/templates/familyevents/addevent_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/familyevents/templates/familyevents/event_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/familyevents/templates/familyevents/event_main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/familyevents/templates/familyevents/event_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/familyevents/templates/familyevents/event_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/familyevents/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/familyevents/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/events.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/events.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

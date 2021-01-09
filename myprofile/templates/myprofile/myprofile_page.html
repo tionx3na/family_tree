@@ -89,7 +89,7 @@
                   <img src="{{profile.photo.url}}" alt="">
               </a>
               <h1>{{profile.first_name}} {{profile.middle_name}} {{profile.last_name}}</h1>
-              <p>@{{profile.user.username}}</p>
+              <h6>@{{profile.user.username}}</h6>
           </div>
           {% endfor %}
 
@@ -99,32 +99,11 @@
       </div>
   </div>
   <div class="profile-info col-md-9">
-      <div class="panel">
-          <form>
-              <textarea placeholder="Whats in your mind today?" rows="2" class="form-control input-lg p-text-area"></textarea>
-          </form>
-          <footer class="panel-footer">
-              <button class="btn btn-warning pull-right">Post</button>
-              <ul class="nav nav-pills">
-                  <li>
-                      <a href="#"><i class="fa fa-map-marker"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fa fa-camera"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class=" fa fa-film"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fa fa-microphone"></i></a>
-                  </li>
-              </ul>
-          </footer>
-      </div>
+
       <div class="panel">
           {% for profile in profile %}
           <div class="bio-graph-heading">
-              {{profile.description}}
+              <h4> " {{profile.description}} "</h4>
           </div>
           {% endfor %}
 
