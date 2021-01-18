@@ -5,7 +5,10 @@ from register.models import *
 
 class Login(forms.Form):
     name = forms.CharField(max_length=50, required = True)
-    password = forms.CharField(max_length=100, required=True)
+    attrs = {
+        "type": "password"
+    }
+    password = forms.CharField(widget=forms.TextInput(attrs=attrs))
 
 
     def clean(self):

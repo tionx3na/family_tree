@@ -13,6 +13,7 @@
 										<p>Your new username should not be your name!</p>
 										<form enctype="multipart/form-data" class="woocommerce-form woocommerce-form-login login" method="post">
 											{% csrf_token %}
+											<p><strong>{{error}}</strong></p>
 
 											{{form2.as_p}}
 

@@ -43,14 +43,25 @@ def newuser(requests):
         username = requests.POST.get('username')
         email = requests.POST.get('email')
         password = requests.POST.get('password')
-        user = User.objects.get(username__exact=requests.user)
-        user.username = username
-        user.email = emailxt5lispo8xs
-        user.set_password(password)
-        user.save()
-        activeinvite = ActiveInvite(user=requests.user)
-        activeinvite.save()
-        return redirect('login')
+
+        try:
+            user = User.objects.get(username__exact=username)
+        except User.DoesNotExist:
+            user = None
+        if user:
+            error = "Username Already exists!"
+            context = {'form2': form2, 'error':error}
+            return render(requests, 'home/new_user.html', context)
+
+        else:
+            user = User.objects.get(username__exact=requests.user)
+            user.username = username
+            user.email = email
+            user.set_password(password)
+            user.save()
+            activeinvite = ActiveInvite(user=requests.user)
+            activeinvite.save()
+            return redirect('login')
     context = {'form2': form2}
     return render(requests, 'home/new_user.html', context)
 
