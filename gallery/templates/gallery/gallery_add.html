@@ -95,6 +95,7 @@
 												<form class="woocommerce-form woocommerce-form-login login" method="post" enctype="multipart/form-data">
                                         			{% csrf_token %}
                                     				<p class="form-row">
+													<p><strong>{{error}}</strong></p>
                                    					 {{form.as_p}}
                                    					 </p>
                                                     <br>

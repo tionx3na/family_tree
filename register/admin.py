@@ -8,6 +8,7 @@ from django.contrib import messages                                         # Fo
 from django.contrib.auth.models import User
 from login.models import ActiveInvite
 
+
 # Register your models here.
 admin.site.site_header = 'Erupakkatu Family Admin Dashboard'
 admin.site.unregister(Group)
@@ -38,8 +39,6 @@ def send_mail (modeladmin,request,queryset):
 class PendingInviteAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'comment')
     actions= [send_mail]
-
-
 
 
 

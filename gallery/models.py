@@ -6,13 +6,15 @@ class Add(models.Model):
     user = models.CharField(max_length=30, null=True)
     title = models.CharField(max_length=60, null=True)
     description = models.CharField(max_length=100000, null=True)
-    thumbnail = models.ImageField(blank=False)
+    thumbnail = models.ImageField(null=True)
 
     class Meta:
         db_table = ''
         managed = True
         verbose_name = 'Gallery'
         verbose_name_plural = 'Gallery Informations'
+
+
 
     def __str__(self):
         return self.title

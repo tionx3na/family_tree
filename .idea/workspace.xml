@@ -21,12 +21,27 @@
   <component name="ChangeListManager">
     <list default="true" id="5facc6ff-f495-4757-9006-57fc3dcc08c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/new_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/new_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/templates/register/register_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/register/templates/register/register_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/templates/gallery/gallery_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/templates/gallery/gallery_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0016.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0017.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0022.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0116.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0119.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0125.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0126.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0129.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0129_w83trFC.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0136.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0139.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_3444.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_3447.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_3456.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_3460.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_3464.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/register/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/gallery.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +68,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../showcase" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -108,10 +123,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1016" y="491" key="FileChooserDialogImpl" timestamp="1610542846585">
+    <state x="1016" y="491" key="FileChooserDialogImpl" timestamp="1611038779638">
       <screen x="0" y="52" width="1920" height="1028" />
     </state>
-    <state x="1016" y="491" key="FileChooserDialogImpl/0.52.1920.1028@0.52.1920.1028" timestamp="1610542846585" />
+    <state x="1016" y="491" key="FileChooserDialogImpl/0.52.1920.1028@0.52.1920.1028" timestamp="1611038779638" />
     <state x="1146" y="281" width="587" height="594" key="find.popup" timestamp="1610971595602">
       <screen x="0" y="52" width="1920" height="1028" />
     </state>

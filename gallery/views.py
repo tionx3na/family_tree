@@ -21,22 +21,29 @@ def addalbum(request):
         description = request.POST.get('description')
         thumbnail = request.FILES.getlist('thumbnail')
         files = request.FILES.getlist('files')
-        user = request.user
-        add = Add()
-        add.user = user
-        add.title = title
-        add.description = description
-        for t in thumbnail:
-            add.thumbnail = t
-        add.save()
+        try:
+            check = Add.objects.get(title__exact=title)
+        except Add.DoesNotExist:
+            check = None
+        if check:
+            error = "The Title Already Exists! Type a unique title."
+            return render(request, 'gallery/gallery_add.html', {'form': form, 'menu': menu, 'error': error})
+        else:
+            user = request.user
+            add = Add()
+            add.user = user
+            add.title = title
+            add.description = description
+            for t in thumbnail:
+                add.thumbnail = t
+            add.save()
+            for f in files:
+                pictures = Pictures()
+                pictures.add = Add.objects.get(title=title)
+                pictures.image = f
+                pictures.save()
 
-        for f in files:
-            pictures = Pictures()
-            pictures.add = Add.objects.get(title= title)
-            pictures.image = f
-            pictures.save()
-        return redirect('gallery')
-
+            return redirect('gallery')
 
     return render(request, 'gallery/gallery_add.html', {'form': form, 'menu': menu})
 
