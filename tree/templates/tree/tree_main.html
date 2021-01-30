@@ -1,10 +1,178 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load static %}
 
+
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie ie9" lang="en-US">
+   <![endif]-->
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<!-- Title-->
+	<title>ERUPPAKKATTU -FAMILY WEBSITE</title>
+	<!-- Favicon-->
+	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
+	<!-- Stylesheets-->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{% static 'css/shop.css' %}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{% static 'css/gpics.css' %}" type="text/css" media="all" >
+	<script src="http://localhost/tiny_mce/tiny_mce_src.js"></script>
+	<script>
+tinyMCE.init({
+  mode: "textareas",
+});
+</script>
+
+	<!-- end head -->
+</head>
+
+
+
+{% block content %}
+<body class="mobile_nav_class jl-has-sidebar">
+	<div class="options_layout_wrapper jl_clear_at jl_radius jl_none_box_styles jl_border_radiuss jl_en_day_night">
+		<div class="options_layout_container full_layout_enable_front">
+			<header class="header-wraper jl_header_magazine_style two_header_top_style header_layout_style3_custom jl_cus_top_share">
+				<div class="header_top_bar_wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Start Main menu -->
+				<div class="jl_blank_nav"></div>
+				<div id="menu_wrapper" class="menu_wrapper jl_menu_sticky jl_stick">
+					<div class="container">
+						<div class="row">
+							<div class="main_menu col-md-12">
+								<div class="logo_small_wrapper_table">
+									<div class="logo_small_wrapper">
+										<!-- begin logo -->
+										<a class="logo_link" href="{% url 'home' %}">
+											<img class="jl_logo_n" src="{% static 'img/logo_n.png' %}" alt="sprasa" />
+											<img class="jl_logo_w" src="{% static 'img/logo_w.png' %}" alt="sprasa" />
+										</a>
+										<!-- end logo -->
+									</div>
+								</div>
+								<div class="search_header_menu jl_nav_mobile">
+									<div class="menu_mobile_icons">
+										<div class="jlm_w"><span class="jlma"></span><span class="jlmb"></span><span class="jlmc"></span>
+										</div>
+									</div>
+
+									<div class="jl_day_night jl_day_en"> <span class="jl-night-toggle-icon">
+                                    <span class="jl_moon">
+                                    <i class="jli-moon"></i>
+                                    </span>
+										<span class="jl_sun">
+                                    <i class="jli-sun"></i>
+                                    </span>
+										</span>
+									</div>
+								</div>
+								<div class="menu-primary-container navigation_wrapper jl_cus_share_mnu">
+									<ul id="mainmenu" class="jl_main_menu">
+										<li class="menu-item current-menu-item current_page_item"> <a href="{% url 'home' %}">Home<span class="border-menu"></span></a>
+										</li>
+										<li class="menu-item menu-item-has-children"> <a href=""> Features<span class="border-menu"></span>
+                                       <span class="jl_menu_lb" style="background: #222ddc !important;"><span class="jl_lb_ar" style="border-top: 3px solid #222ddc !important;"></span>New</span>
+                                       </a>
+											<ul class="sub-menu">
+												<li class="menu-item"> <a href="{% url 'tree' %}">Family Tree</a></li>
+												<li class="menu-item"> <a href="post-format-standard.html">Family Heritage</span></a></li>
+												<li class="menu-item"> <a href="{% url 'search' ' ' %}">Search Members<span class="border-menu"></span></a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item"> <a href="{% url 'blog' %}">Blog<span class="border-menu"></span></a>
+										</li>
+										<li class="menu-item"> <a href="{% url 'gallery' %}">Gallery<span class="border-menu"></span></a>
+										</li>
+										<li class="menu-item"> <a href="{% url 'events' %}">Family Events<span class="border-menu"></span>
+                                       <span class="jl_menu_lb" style="background: #f74539 !important;"><span class="jl_lb_ar" style="border-top: 3px solid #f74539 !important;"></span>Hot!</span>
+                                       </a>
+
+										</li>
+										<li class="menu-item menu-item-has-children"> <a href="{% url 'myprofile' %}">My Profile<span class="border-menu"></span>
+                                       <span class="jl_menu_lb" style="background: #ffe500 !important; color: #000000 !important;"><span class="jl_lb_ar" style="border-top: 3px solid #ffe500 !important;"></span>YOU</span>
+                                       </a>
+											<ul class="sub-menu">
+												<li class="menu-item"> <a href="{% url 'myprofile' %}">Account Details<span class="border-menu"></span></a>
+												</li>
+												<li class="menu-item"> <a href="{% url 'logout' %}">Logout<span class="border-menu"></span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+
+
+            {% block content1 %}
+
+
+            {% endblock content1 %}
+
+
+
+
+			<!-- Start footer -->
+			<footer id="footer-container" class="jl_footer_act enable_footer_columns_dark">
+				<br>
+				<div class="footer-bottom enable_footer_copyright_dark">
+					<div class="container">
+						<div class="row bottom_footer_menu_text">
+							<div class="col-md-12">
+								<div class="jl_ft_w">© Copyright 2020 Impulsive Creations. All rights reserved powered by Impulsive Creations.
+									<ul id="menu-footer-menu" class="menu-footer">
+										<li class="menu-item menu-item-6"> <a title="" href="">About Us</a>
+										</li>
+										<li class="menu-item menu-item-7"> <a title="" href="">Private policy</a>
+										</li>
+										<li class="menu-item menu-item-8"> <a title="" href="">Forums</a>
+										</li>
+										<li class="menu-item menu-item-9"> <a title="" href="">Community</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- End footer -->
+			<div id="go-top"> <a href="#go-top"><i class="jli-up-chevron"></i></a>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
+
+
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/fluidvids.js' %}"></script>
+	<script src="{% static 'js/slick.js' %}"></script>
+	<script src="{% static 'js/custom.js' %}"></script>
+	<script src="{% static 'js/gallery.js' %}"></script>
+	<script src="{% static 'js/gpics.js' %}"></script>
 </body>
+
 </html>
