@@ -22,8 +22,6 @@
     <list default="true" id="5facc6ff-f495-4757-9006-57fc3dcc08c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/family_tree/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/family_tree/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tree/templates/tree/tree_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/tree/templates/tree/tree_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tree/templates/tree/tree_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/tree/templates/tree/tree_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

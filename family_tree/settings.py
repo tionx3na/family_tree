@@ -100,7 +100,7 @@ DATABASES = {
 
         'NAME': 'tree_family',
         'USER': 'postgres',
-        'PASSWORD': 'alientongbmw',
+        'PASSWORD': 'Arjunek@123',
         'HOST': 'localhost',
 
     }
