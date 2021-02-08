@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5facc6ff-f495-4757-9006-57fc3dcc08c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/blog_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/blog_main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/family_tree/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/family_tree/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/family_tree/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/family_tree/urls.py" afterDir="false" />
@@ -29,6 +30,9 @@
       <change beforePath="$PROJECT_DIR$/home/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/home/home_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/home_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tree/templates/tree/tree_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/tree/templates/tree/tree_page.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/family_tree/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/family_tree/settings.py" afterDir="false" />
+>>>>>>> 324d9efe231226d642eeadcdffdfc6a830bf7cc0
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +58,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
