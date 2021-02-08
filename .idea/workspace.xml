@@ -21,27 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5facc6ff-f495-4757-9006-57fc3dcc08c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/templates/gallery/gallery_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/templates/gallery/gallery_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0016.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0017.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0022.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0116.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0119.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0125.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0126.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0129.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0129_w83trFC.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0136.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_0139.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_3444.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_3447.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_3456.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_3460.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/2021/01/04/DSC_3464.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/blog_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/blog_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/family_tree/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/family_tree/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/family_tree/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/family_tree/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/familyevents/templates/familyevents/event_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/familyevents/templates/familyevents/event_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/templates/gallery/gallery_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/templates/gallery/gallery_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/home_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/home_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/templates/tree/tree_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/tree/templates/tree/tree_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

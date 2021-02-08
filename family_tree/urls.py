@@ -32,6 +32,7 @@ urlpatterns = [
     path('blog', include('blog.urls')),
     path('tree', include('tree.urls')),
     path('search', include('search.urls')),
+    path('heritage', include('heritage.urls')),
 ]
 
 

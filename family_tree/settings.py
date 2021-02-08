@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'tree.apps.FamilytreeConfig',
     'search.apps.SearchConfig',
     'advertisement.apps.AdvertisementConfig',
+    'heritage.apps.HeritageConfig',
 ]
 
 SITE_ID = 1

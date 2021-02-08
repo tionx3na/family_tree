@@ -11,11 +11,21 @@
 					<DIV CLASS="tm" STYLE="border:1px solid #999; padding:12px; width:auto;">
 
 						<P STYLE="margin:0;" hidden="hidden"><B>GEDCOM or FamilyScript:</B></P>
-						{% for tree in tree %}
 
-						<TEXTAREA CLASS="tm" NAME="family" COLS="80" ROWS="8" STYLE="width:100%" hidden="hidden">{{tree.script}}</TEXTAREA>
 
-						{% endfor %}
+						<TEXTAREA CLASS="tm" NAME="family" COLS="80" ROWS="8" STYLE="width:100%" hidden="hidden">
+							iSTART	pArun	sI5L58	gm	r423331325 71 120
+iI5L58	^START	sSTART	pWife	gf
+iRL6M1	^START	mI5L58	fSTART	pFugakhu	gm	lUchiha	qUchiha	jninja	sV6CRP	r515031166 120 120
+iV6CRP	^RL6M1	gf	sRL6M1	lUchiha	pMikato	qUzumaki	r430494460 158 120
+iU2EIO	^RL6M1	mV6CRP	fRL6M1	lUchiha	qUchiha	pItachi	gm	jThe Lord	r236483715 92 120	sSV3YG
+iE6PBE	^RL6M1	mV6CRP	fRL6M1	lUchiha	qUchiha	pSasuke	gm	sSNS45	r981325166 96 120
+iSNS45	^E6PBE	gf	sE6PBE	lUchiha	pSakura	qHaruno	jUseless	r370921336 160 119
+iOLFII	^E6PBE	mSNS45	fE6PBE	lUchiha	qUchiha	pSarada	gf	r983334910 160 107
+iSV3YG	^U2EIO	gf	sU2EIO	lUchiha	pIzumi	qUchiha	r706999632 153 120
+pI5L58 START	gm
+						</TEXTAREA>
+
 
 						<INPUT TYPE="hidden" NAME="operation" VALUE="temp_view">
 
