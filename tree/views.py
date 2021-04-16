@@ -12,4 +12,9 @@ def tree(requests):
     tree = TreeScript.objects.all()
     return render(requests, 'tree/tree_page.html', {'tree': tree})
 
+@login_required
+def h_tree(requests):
+    tree = TreeScript.objects.all()
+    return render(requests, 'tree/h_tree.html', {'tree': tree})
+
 
