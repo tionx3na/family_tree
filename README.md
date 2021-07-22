@@ -18,5 +18,5 @@ This is a blog type website built for the Erupakattu Family. Features include -
 ### Frameworks and Technologies
 
 The front end of the website is done using vanilla javascript and css while the backend is done using the Django framework. The family tree is created using Gedcom file format.
-
+ > [GEDCOM - see wikipidea](https://en.wikipedia.org/wiki/GEDCOM)
 
